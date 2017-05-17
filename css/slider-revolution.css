@@ -1424,8 +1424,8 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 .tp-rightarrow.round									{	z-index:100;cursor:pointer; position:relative;	background:url(../../images/assets/revolution-slider/small_right.png) no-Repeat top left;	width:19px;	height:14px;  margin-right:0px; float:left;	margin-top:0px}
 
 
-.tp-leftarrow.round-old									{	z-index:100;cursor:pointer; position:relative;	background:url(../../images/assets/revolution-slider/arrow_left.png) no-Repeat top left;	width:26px;	height:26px;  margin-right:0px; float:left; margin-top:0px;	}
-.tp-rightarrow.round-old								{	z-index:100;cursor:pointer; position:relative;	background:url(../../images/assets/revolution-slider/arrow_right.png) no-Repeat top left;	width:26px;	height:26px;  margin-right:0px; float:left;	margin-top:0px}
+.tp-leftarrow.round-old									{	z-index:100;cursor:pointer; position:relative;	background:url(../../images/assets/arrow_left.png) no-Repeat top left;	width:26px;	height:26px;  margin-right:0px; float:left; margin-top:0px;	}
+.tp-rightarrow.round-old								{	z-index:100;cursor:pointer; position:relative;	background:url(../../images/assets/arrow_right.png) no-Repeat top left;	width:26px;	height:26px;  margin-right:0px; float:left;	margin-top:0px}
 
 
 .tp-leftarrow.navbar									{	z-index:100;cursor:pointer; position:relative;	background:url(../../images/assets/revolution-slider/small_left_boxed.png) no-Repeat top left;	width:20px;	height:15px;   float:left;	margin-right:6px; margin-top:12px}
