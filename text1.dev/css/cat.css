@@ -1,0 +1,89 @@
+.header {
+	width: 100%;
+	float: left;
+	background: url('../images/background3.jpg') no-repeat !important;
+	background-size: 100%;
+}
+.Portfolio {
+	margin: 30px 0 0;
+}
+.tab-menu {
+	width: 100%;
+	float: left;
+	margin-top: 40px;
+}
+.tab-menu .nav-tabs {
+	border-bottom: 1px solid #cccccc;
+}
+.tab-menu .nav-tabs {
+	border-bottom: 1px solid #cccccc;
+	margin-bottom: 40px;
+}
+.tab-menu .nav-tabs li {
+	width: 25%;
+}
+.tab-menu .nav-tabs li>a {
+	color: #3e3e3e;
+	font-size:18px;
+}
+.tab-menu .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	border:none;
+	border-radius: 0;
+	border-bottom: 1px solid #f27982;
+
+}
+.item {
+	width: 100%;
+	float: left;
+}
+.item img {
+	width: 100%;
+}
+.item-content {
+	width: 100%;
+	float: left;
+	background: #01b9c3;
+	color: #fff;
+	padding: 20px 0px 20px 20px;
+}
+.item-content a {
+	color: #fff;
+}
+.item-content h4 a {
+	font-size: 22px;
+}
+.item-content h5 a {
+	font-size: 16px;
+}
+.item-content button {
+	border: none;
+    background: none;
+    color: #fff;
+    border-bottom: 1px solid #ccc !important;
+}
+.web-design {
+	background: #1e3041 !important;
+}
+.tab-pane .row {
+	border-bottom: none;
+}
+.player {
+	background: #424041 !important;
+}
+.marketing {
+	background: #0093b5 !important;
+}
+.sortware {
+	background: #6176ab !important;
+}
+@media only screen (min-width: 768px) {
+	.Portfolio {
+		margin-top: 40px !important; 
+	}
+	.tab-menu .nav-tabs li {
+    margin-right: 65px !important;
+	}
+	.item {
+		margin-bottom: 20px ;
+	}
+}

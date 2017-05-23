@@ -1,0 +1,121 @@
+.header {
+	width: 100%;
+	float: left;
+	background: url('../images/background2.jpg') repeat !important;
+	background-size: 100%;
+}
+.top-detail {
+	width: 100%;
+	float: left;
+	background: #3d4f59;
+	color: #fff;
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+.top-detail h2 {
+	font-size: 32px;
+}
+.top-detail p{
+	font-size: 18px;
+}
+.comment {
+	width: 100%;
+	float:left;
+	margin-bottom: 80px;
+	margin-top: 20px;
+}
+.number-comment {
+	background: #363636;
+	color: #fff;
+	font-size: 18px;
+	width: 140px;
+	padding: 6px 12px;
+	margin-bottom: 50px;
+}
+.comment-list {
+	padding-left: 0;
+}
+.media-comment {
+	width: 100%;
+	float: left;
+	margin-bottom: 30px;
+}
+.comment-left {
+	width: 10%;
+	float: left;
+}
+.media-body {
+	width: 90%;
+	float: left;
+}
+.media-body .media-heading a {
+	font-size: 18px;
+	color: #333333;
+	font-weight: bold;
+}
+.media-body .media-heading span {
+	font-size: 16px;
+	color: #333333;
+	font-weight: normal;
+}
+.media-body p {
+	font-size: 16px;
+	color: #222222;
+}
+.reply {
+	padding-left: 80px;
+}
+.rep {
+	font-size: 16px;
+	color: #222222;
+	font-weight: bold;
+}
+.form-comment {
+	margin-top: 20px;
+	width: 100%;
+	float: left;
+}
+.form-comment input[type=text] {
+	padding-top: 0 !important;
+}
+.form-comment input {
+	width: 50%;
+	height: 40px;
+	color: #333333;
+	font-size: 14px;
+	padding-left: 20px;
+	margin-bottom: 30px;
+	border:1px solid #757575;
+	font-style: italic;
+}
+.text-comment {
+	height: 150px !important;
+}
+.form-comment button {
+	width: 50%;
+	background: #363636;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 0;
+	padding: 10px;
+}
+.address .container .row {
+	border-bottom: none;
+}
+.detail-content {
+	width: 100%;
+	float: left;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+.top-content {
+	width: 45%;
+	margin-bottom: 200px;
+}
+.center-content {
+	width: 30%;
+	margin-bottom: 30px;
+}
+.end-content {
+	width: 60%;
+}
