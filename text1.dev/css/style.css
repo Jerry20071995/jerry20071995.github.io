@@ -498,7 +498,10 @@ a:hover {
 	}
 	.top-header h2 {
 	    color: #fff;
-	    font-size: 48px;
+	    font-size: 28px;
 	    margin: 25px 0px 25px;
+	}
+	.top-header p {
+	    font-size: 11px;
 	}
 }

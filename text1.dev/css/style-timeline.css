@@ -74,7 +74,7 @@ Main components
 }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-block {
-    margin: 4em 0;
+    margin: 3em 0;
   }
   .cd-timeline-block:first-child {
     margin-top: 0;
