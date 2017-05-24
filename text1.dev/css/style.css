@@ -18,7 +18,7 @@ a:hover {
 	float:left;
 }
 .right-bar {
-	width:215px;
+	width:22%;
 	float:left;
 	position:fixed;
 	height:100%;
@@ -69,7 +69,7 @@ a:hover {
 	border-bottom-right-radius:0;
 }
 .content {
-	margin-left:215px;
+	margin-left:22%;
 }
 .none-border {
 	border-bottom: none !important;
@@ -100,13 +100,16 @@ a:hover {
 	text-align:center;
 	margin-bottom: 53px;
 	line-height:20px;
+	display: inline-block;
+	width: 45%;
 }
 .top-header .btn-danger {
 	font-size:22px;
 	background:#fc6471;
 	padding:6px 20px;
-	border: none;
-	margin-bottom: 115px;
+	border:none;
+	display: block;
+	margin:0 auto 115px auto;
 }
 .about-me {
 	margin-top:115px;
@@ -141,7 +144,7 @@ a:hover {
 	padding: 65px 115px !important;
 }
 .work-experience {
-    border-bottom: 3px solid #fb6470;
+    border-bottom: 2px solid #fb6470;
     width: 77px;
     margin-bottom: 0;
     padding-top: 20px;
@@ -183,7 +186,7 @@ a:hover {
 	color:#fff;
 }
 .my-skill {
-	margin-top:20px;
+	margin-top:45px;
 }
 .user-experience {
 	margin-bottom:20px;
@@ -199,7 +202,7 @@ a:hover {
 }
 .myBar {
 	width:90%;
-	height:10px;
+	height:5px;
 	background-color:#e85762;
 }
 .user-experience span {
@@ -211,7 +214,7 @@ a:hover {
 	margin-top:50px;
 }
 .address .row {
-	border-bottom:1px solid #e3e3e3;
+	border-bottom:1px solid #E5E5E5;
 	padding-bottom:70px;
 }
 .address h4 {
@@ -220,7 +223,7 @@ a:hover {
 	color:#3e3e3e;
 }
 .message {
-	border-right:1px solid #cbcbcb;
+	border-right:1px solid #CDCDCD;
 	padding-right:70px;
 }
 .form input {
@@ -249,15 +252,18 @@ a:hover {
 }
 .location {
 	background:url('../images/icon-home.png') top left no-repeat;
-	padding-left:81px;
+	padding-left:80px;
+	background-position: 0px 10px;
 }
 .email {
 	background:url('../images/icon-email.png') top left no-repeat;
-	padding-left:81px;
+	padding-left:80px;
+	background-position: 0px 10px;
 }
 .call {
 	background:url('../images/icon-phone.png') top left no-repeat;
-	padding-left:81px;
+	padding-left:80px;
+	background-position: 0px 10px;
 }
 .list li {
 	margin-bottom:60px;
@@ -265,6 +271,7 @@ a:hover {
 .list h5 {
 	font-size:22px;
 	color:#3e3e3e;
+	margin-bottom: 15px;
 }
 .list p {
 	font-size:16px;
@@ -280,17 +287,17 @@ a:hover {
 }
 .footer-content .list-inline li {
 	margin-right:10px;
-	border-right:1px solid #a2a2a2;
+	border-right:1px solid #ACACAC;
 	padding-right:20px;
 }
 .footer-content .list-inline .twitter {
 	color:#6bd6dc;
 }
 .footer-content .list-inline .skype {
-	color:#9d9d9d;
+	color:#9B9B9B;
 }
 .footer-content .list-inline li:last-child{
-	border-right: 0;
+	border-right:0;
 }
 .footer-content p {
 	font-size:16px;
@@ -372,7 +379,7 @@ a:hover {
 .myBar::after {
     content: '';
     position: absolute;
-    top: -5px;
+    top: -7px;
     right: 0;
     height: 0;
     width: 0;
@@ -422,7 +429,8 @@ a:hover {
 		padding: 15px;
 	}
 	.avatar img{
-		margin-top: 0;
+		margin: 0 auto;
+		float: none;
 	}
 	#cd-timeline::before{
 		top: 55px !important;
