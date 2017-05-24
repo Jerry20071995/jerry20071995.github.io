@@ -504,4 +504,25 @@ a:hover {
 	.top-header p {
 	    font-size: 11px;
 	}
+	.top-header .btn-danger {
+	    font-size: 14px;
+	}
+	.end-right h5 a {
+		font-size: 15px !important;
+	}
+	.end-right p a {
+		font-size: 12px !important;
+	}
+	.right-menu .list-group-item a {
+		font-size: 11px;
+	}
+	.about-me h2 {
+		font-size: 24px;
+	}
+	.experience h2 {
+		font-size: 24px;
+	}
+	.experience_edu h2 {
+    	font-size: 24px;
+	}
 }
