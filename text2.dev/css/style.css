@@ -230,6 +230,9 @@ a:hover {
 	  }
 }
 @media only screen and (min-width: 600px) and (max-width: 768px) {
+	.img-footer {
+		height: 115px !important; 
+	}
 	.col3 {
 		width: 46% !important;
 		margin-right: 2% !important;
