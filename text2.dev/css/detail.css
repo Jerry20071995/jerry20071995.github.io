@@ -1,0 +1,288 @@
+@media only screen and (max-width: 480px) {
+	.cat-hidden {
+		display: none;
+	}
+	.search {
+		margin-bottom: 0 !important;
+	}
+	.detail-travelling {
+		padding-top: 30px !important;
+	}
+	.about-travelling .about-content {
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+	}
+	.about-travelling .about-h6 {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+	.cat-comment {
+		margin-left: 0 !important;
+	}
+	.comment-detail .comment-list li {
+		margin-right: 80px !important;
+	}
+	.comment-like .cat-comment .list-inline li:first-child {
+		margin-left: 0 !important;
+	}
+	.comment-like .cat-comment .list-inline li:last-child {
+		float: right;
+	}
+	.detail-list {
+		margin-left: 0 !important;
+	}
+	.average {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.michell-facebook {
+		text-align: center;
+	}
+	.michell-facebook .list-inline li {
+		margin-right: 0 !important;
+	}
+}
+
+
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+	.cat-hidden {
+		display: none;
+	}
+	.search {
+		margin-bottom: 0 !important;
+	}
+	.detail-travelling {
+		padding-top: 30px !important;
+	}
+	.about-travelling .about-content {
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+	}
+	.about-travelling .about-h6 {
+		padding-left: 50px !important;
+		padding-right: 50px !important;
+	}
+	.cat-comment {
+		margin-left: 10px !important;
+		text-align: center;
+	}
+	.comment-detail .comment-list li {
+		margin-right: 80px !important;
+	}
+	.michell-facebook .list-inline li {
+		margin-right: 30px !important;
+	}
+	.michell-facebook .list-inline li:last-child {
+		margin-right: 0 !important;
+	}
+	.detail-facebook .icon-facebook {
+		padding: 8px 10px !important;
+	}
+	.facebook-span {
+		font-size: 13px !important;
+		padding: 6px 20px !important; 
+	}
+}
+.slider_recomer {
+	position: relative;
+	width: 100%;
+	float: left;
+	background: #fff;
+	padding-top: 60px;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.slider_recomer h5 {
+	text-transform: uppercase;
+	margin: 0 !important;
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	color: #212121;
+}
+.slider_recomer h6 {
+	text-transform: uppercase;
+	margin: 20px 0 0 0 !important;
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	color: #212121;
+}
+.customNavigation {
+	position: absolute;
+	top: 70px;
+	right: 40px;
+}
+.customNavigation .btn {
+	padding: 0 !important;
+}
+.detail-slider {
+	padding-top: 20px;
+	padding-left: 0;
+	padding-right: 0;
+}
+.detail-customNavigation .left {
+	position: absolute;
+	top: 37%;
+	left: -13px;
+}
+.detail-customNavigation .right {
+	position: absolute;
+	top: 37%;
+	right: -13px;
+}
+.detail-slider {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.detail-search {
+	margin-bottom: 40px !important;
+}
+.beautyful {
+	margin-top: 5px;
+	margin-bottom: 50px !important;
+}
+.detail-travelling {
+	padding-bottom: 0;
+}
+.detail-list i {
+	margin-right: 5px !important;
+}
+.detail-list li:first-child {
+	margin-right: 10px !important;
+}
+.average {
+	text-align: center;
+}
+.average span {
+	font-family: 'Hind', sans-serif;
+	color: #999999;
+	text-transform: uppercase;
+	font-size: 16px;
+	margin-right: 5px;
+}
+.average i {
+	color: #494949;
+	margin-right: 5px;
+} 
+.detail-star {
+	color: #999999 !important;
+}
+.detail-michell {
+	width: 100%;
+	float: left;
+}
+.michell {
+	width: 100%;
+	float: left;
+	background: #fff;
+}
+.michell .row{
+	border: 1px solid #f5f5f7;
+	border-left: none;
+}
+.michell img {
+	display: inline;
+}
+.michell-content {
+	display: inline;
+}
+.michell-beverly .all-post {
+	border-bottom: 1px solid #eaeaeb;
+	margin-bottom: 20px;
+}
+.michell-beverly h5 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	color: #212121;
+	text-transform: uppercase;
+}
+.michell-beverly h6 {
+	font-family: 'Hind', sans-serif;
+	font-size: 14px;
+	color: #212121;
+	text-transform: uppercase;
+	word-spacing: 10px;
+	float: right;
+	margin-right: 20px;
+}
+.michell-beverly p {
+	font-family: 'Hind', sans-serif;
+	font-size: 16px;
+	color: #424242;
+	margin-bottom: 0;
+	word-spacing: 5px
+}
+.michell-border {
+	padding-right: 0;
+	padding-left: 30px;
+	padding-bottom: 16px;
+}
+.michell-img {
+	padding-right: 0;
+}
+.Patricia {
+	margin-right: 20px;
+}
+.detail-facebook {
+	width: 100%;
+	float: left;
+
+}
+.michell-facebook {
+	width: 100%;
+	float: left;
+	margin-top: 35px;
+	margin-bottom: 60px;
+}
+.michell-facebook .list-inline li {
+	margin-right: 30px;
+}
+.michell-facebook .list-inline li:last-child {
+	margin-right: 0;
+}
+.icon-facebook {
+	display: inline;
+	background: #212121;
+	border: 1px solid #f1f1f3;
+	border-right: none;
+	padding: 10px 15px;
+}
+.icon-facebook i {
+	color: #fff;
+	
+}
+.facebook-span {
+	display: inline-block;
+	font-family: 'Hind', sans-serif;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #999999;
+	background: #fff;
+	text-align: center;
+	border: 1px solid #f5f5f7;
+	padding: 8px 29px;
+}
+.michell-facebook .list-inline li {
+	padding: 0;
+}
+.icon-twitter {
+	background: #fff;
+}
+.icon-twitter i {
+	color: #494949;
+}
+.facebook-span {
+	letter-spacing: 0 !important;
+}
+.detail-slider1 {
+	width: 100%;
+	float: left;
+}
+.cat-facebook {
+	margin-top: 0 !important;
+}
+.comment-fashion .comment-social .list-inline {
+	margin-right: 55px;
+}

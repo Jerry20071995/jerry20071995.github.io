@@ -1,0 +1,3 @@
+slice PSD: 30 minute
+Convert sliced files to HTML, CSS: 3,5 ngày
+Responsive: 1,5 ngày
