@@ -1,0 +1,88 @@
+.portfolio-1col {
+	width: 100%;
+	float: left;
+	background: #f3f3f3;
+}
+.portfolio-all {
+	width: 100%;
+	float: left;
+	margin-top: 40px;
+}
+.portfolio-all .list-inline {
+	margin-bottom: 35px;
+}
+.portfolio-all .list-inline li {
+	margin-right: 20px;
+}
+.portfolio-all .list-inline li:last-child {
+	margin-right: 0;
+}
+.portfolio-all .list-inline li:last-child a {
+	background: #62a29e;
+	border-bottom-color: #538b86;
+}
+.portfolio-all .list-inline li a {
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold;
+	background: #98a3a3;
+	text-transform: uppercase;
+	padding: 12px 12px;
+	border-radius: 5px;
+	border-bottom: 3px solid #7f8c8c;
+}
+.portfolio-avatar {
+	width: 100%;
+	float: left;
+}
+.portfolio-avatar img {
+	width: 100%;
+	border-bottom: 3px solid #e5e6e6;
+	border-radius: 5px;
+}
+.avatar-content {
+	width: 100%;
+	float: left;
+}
+.avatar-content h4 {
+	font-size: 20px;
+	color: #7f8c8c;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+.avatar-content p {
+	font-size: 13px;
+	color: #7f8c8c;
+	word-spacing: 5px;
+	line-height: 25px;
+	margin-bottom: 80px;
+}
+.view-detail {
+	width: 100%;
+	float: left;
+}
+.project-dom {
+	font-size:14px;
+	color: #7f8c8c;
+	font-weight: bold;
+}
+.detail {
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 20px 60px;
+	border-radius: 5px;
+	border-bottom: 3px solid #e2544d;
+	background: #e8645a;
+}
+.donec-faucibus {
+	margin-bottom: 35px;
+}
+.dom-color {
+	color: #e8645a;
+}
+.view-detail-color {
+	background: #76caca;
+	border-bottom-color: #62bdbd;
+}
