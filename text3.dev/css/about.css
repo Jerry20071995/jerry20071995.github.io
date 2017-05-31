@@ -1,0 +1,129 @@
+.about {
+	width: 100%;
+	float: left;
+	background: #ececec;
+	margin-top: 104px;
+}
+.about:before {
+
+}
+.about-us {
+	font-size: 20px;
+	color: #7f8c8c;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 30px 0;
+	margin: 0;
+}
+.home-about a {
+	float: right;
+	font-size: 12px;
+	color: #7f8c8c;
+	padding: 30px 0;
+}
+.donec h4 {
+	font-size: 30px;
+	font-weight: bold;
+	color: #e1524b;
+	margin-bottom: 25px;
+}
+.about-choose {
+	margin-top: 55px;
+}
+.donect-content {
+	padding-right: 10px;
+	margin-bottom: 70px;
+}
+.donect-content p {
+	font-size: 14px;
+	color: #7f8c8c;
+	text-align: left;
+}
+.our-team {
+	width: 100%;
+	float: left;
+	background: #ececec;
+	position: relative;
+}
+.our-team h2 {
+	font-size: 40px;
+	font-weight: bold;
+	color: #7f8c8c;
+	text-align: center;
+	margin-top: 70px;
+	margin-bottom: 80px;
+	text-transform: uppercase;
+}
+.about-container {
+	position: absolute;
+	bottom: -100px;
+}
+.about-juery {
+	width: 100%;
+	float: left;
+}
+.about-img {
+	width: 100%;
+}
+.about-btn {
+	background: #98a3a3 !important;
+	border-bottom: 3px solid #7f8c8c !important;
+	border: none;
+}
+.about-suspendisse {
+	background: #90d1cb !important;
+	border-radius: 5px;
+}
+.about-quisque {
+	margin-top: 35px;
+	text-align: left;
+	padding: 0 35px;
+}
+.suspendisse-content img {
+	border-radius: 5px;
+}
+.about-quisque p {
+	color: #fff;
+	margin-bottom: 70px;
+}
+.about-quisque .list-inline {
+	margin-bottom: 55px;
+}
+.about-quisque .list-inline li {
+	padding: 0;
+	margin-right: 8px;
+}
+.about-quisque .list-inline li:last-child {
+	margin-right: 0;
+}
+.about-quisque .list-inline li i {
+	color: #fff;
+	padding: 8px 12px;
+	border-radius: 5px;
+	background: #81bcb6;
+	margin-top: 0;
+}
+.about-btn-red {
+	background: #e8645a;
+}
+.solution {
+	width: 100%;
+	float: left;
+	background: #f3f3f3;
+}
+.solution h4 {
+	font-weight: lighter;
+	color: #e1524b;
+	font-size: 40px;
+	margin-top: 215px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.solution-content {
+	padding: 0 110px;
+}
+.solution-content p {
+	font-size: 14px;
+	color: #7f8c8c;
+	text-align: center;
+}
