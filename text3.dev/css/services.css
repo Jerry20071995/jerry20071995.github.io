@@ -1,3 +1,8 @@
+@media only screen and (max-width: 768px) {
+	.first-suspendisse {
+		margin-top: 50px !important;
+	}
+}
 .start {
 	position: absolute;
 	top: -30px;
