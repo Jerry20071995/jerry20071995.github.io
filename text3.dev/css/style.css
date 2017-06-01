@@ -12,6 +12,65 @@ a {
 a:hover {
 	text-decoration: none;
 }
+@media only screen and (max-width: 480px) {
+	.main {
+		margin-top: 85px;
+	}
+}
+@media only screen and (max-width: 768px) {
+	
+	.services h4 {
+		font-size: 20px !important;
+	}
+	.view-more .btn-default {
+		font-size: 14px !important;
+	}
+	.view-more {
+		text-align: center;
+		float: none !important;
+	}
+	.first-suspendisse {
+		margin-bottom: 50px;
+	}
+	.modus-why h2 {
+		font-size: 20px !important;
+	}
+	.choose-first {
+		text-align: center;
+	}
+	.jquery {
+		text-align: center;
+	}
+	.jquery img {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	.blog-content {
+		margin-left: 20px;
+	}
+	.carousel .carousel-caption h2 {
+		font-size: 25px !important;
+	}
+	.carousel .carousel-caption p {
+		font-size: 12px !important;
+	}
+	.carousel-control .icon-prev {
+		height: 10% !important;
+	}
+	.carousel-control .icon-next {
+		height: 10% !important;
+	}
+	.choose-first h5 {
+		margin-bottom: 10px !important;
+		margin-top: 30px;
+	}
+	.from-blog h5 {
+		text-align: center;
+	}
+	.carousel-indicators {
+		bottom: -10% !important; 
+	}
+}
 .wapper {
 	width: 100%;
 	float: left;

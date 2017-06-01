@@ -1,3 +1,21 @@
+@media only screen and (max-width: 768px) {
+	.send-mesager {
+		margin-bottom: 50px !important;
+	}
+	.btn-default {
+		font-size: 11px !important;
+		padding: 14px 60px !important;
+	}
+	.contact-address h5 {
+		margin-bottom: 35px !important;
+	}
+	.contact-address {
+		margin-bottom: 20px;
+	}
+	.about {
+		margin-top: 150px !important;
+	}
+}
 .contact-map {
 	width: 100%;
 	float: left;

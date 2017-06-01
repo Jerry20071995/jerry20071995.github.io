@@ -1,3 +1,25 @@
+@media only screen and (max-width: 768px) {
+	.main-about {
+		margin-top: 50px !important;
+	}
+	.our-team h2 {
+		font-size: 20px !important;
+		margin: 30px 0 !important;
+	}
+	.about-quisque .list-inline li {
+		margin-right: 36px !important;
+	}
+	.about-quisque .list-inline li:last-child {
+		margin-right: 0 !important;
+	}
+	.solution h4 {
+		font-size: 20px !important;
+		margin-top: 30px !important;
+	}
+	.solution-content {
+		padding: 0 !important;
+	}
+}
 .about {
 	width: 100%;
 	float: left;
