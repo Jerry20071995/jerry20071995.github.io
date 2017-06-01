@@ -1,3 +1,12 @@
+@media only screen and (max-width: 768px) {
+	.portfolio-all .list-inline li a {
+		font-size: 8px !important;
+		padding: 10px 10px !important;
+	}
+	.portfolio-all .list-inline li {
+		margin-right: -5px !important;
+	}
+}
 .home-about span {
 	margin: 0 10px;
 	color: #e1524b;
