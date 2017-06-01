@@ -1,0 +1,102 @@
+.contact-map {
+	width: 100%;
+	float: left;
+}
+.map {
+	width: 100%;
+	float: left;
+	margin-top: 50px;
+	margin-bottom: 60px;
+}
+.map script {
+	border-radius: 7px;
+}
+.contact-content {
+	width: 100%;
+	float: left;
+	background: #ececec;
+	border-radius: 5px;
+	margin-bottom: 60px;
+}
+.contact-content p {
+	font-size: 13px;
+	color: #777777;
+	word-spacing: 3px;
+	padding: 25px 20px;
+}
+.form-control {
+	background: #e5e6e6;
+	border: none;
+	border-top: 2px solid #d9dada;
+	border-left: 2px solid #d9dada;
+}
+.form-horizontal .control-label {
+	color: #7f8c8c;
+	font-size: 18px;
+	font-weight: normal;
+
+}
+.btn-default {
+	border: none;
+	border-radius: 7px;
+	background: #e8645a;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 18px 75px;
+	margin-top: 25px;
+	border-bottom: 3px solid #e2544d;
+}
+#messager {
+	height: 240px;
+}
+.contact-address {
+	width: 100%;
+	float: left;
+}
+.send-mesager {
+	margin-bottom: 230px;
+}
+.contact-address h5 {
+	font-size: 20px;
+	font-weight: 600;
+	color: #7f8c8c;
+	margin-top: 0;
+	margin-bottom: 50px;
+	margin-left: 30px;
+	text-transform: uppercase;
+}
+.contact-address ul {
+	margin-bottom: 0;
+}
+.fa-map-marker {
+	color: #e2544d;
+}
+.fa-phone, .fa-envelope-o {
+	color: #7f8c8c;
+}
+.contact-address ul li i {
+	margin-right: 5px;
+}
+.contact-address ul li {
+	margin-bottom: 15px;
+}
+.contact-address ul li:last-child {
+	margin-bottom: 0;
+}
+.contact-address ul li:first-child {
+	background: url('../images/images/local.png') left center no-repeat ;
+	padding-left: 35px;
+	margin-bottom: 30px;
+}
+.contact-address ul li:first-child span {
+	font-size: 14px;
+}
+.contact-address ul li span {
+	font-size: 16px;
+	color: #777777;
+}
+.contact-address ul li:last-child span {
+	color: #e2534b;
+	text-decoration: underline;
+}
