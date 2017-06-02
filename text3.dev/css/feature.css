@@ -295,6 +295,9 @@
 	font-weight: 800;
 	margin-bottom: 30px;
 }
+.arrow-list .arrow-content ul li {
+	margin-bottom: 10px;
+}
 .arrow-content ul {
 	padding-left: 0;
 }
