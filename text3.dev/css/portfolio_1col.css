@@ -1,3 +1,16 @@
+@media only screen and (max-width: 768px) {
+	.portfolio-all .list-inline li a {
+		font-size: 8px !important;
+		padding: 10px 10px !important;
+	}
+	.portfolio-all .list-inline li {
+		margin-right: -5px !important;
+	}
+	.detail {
+		font-size: 7px !important;
+		padding: 9px 23px !important;
+	}
+}
 .portfolio-1col {
 	width: 100%;
 	float: left;
@@ -60,6 +73,13 @@
 .view-detail {
 	width: 100%;
 	float: left;
+}
+.view-detail i {
+	color: #fff;
+    background: #528b85;
+    padding: 10px 15px;
+    border-radius: 7px;
+    margin-right: 20px;
 }
 .project-dom {
 	font-size:14px;

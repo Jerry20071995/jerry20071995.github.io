@@ -48,17 +48,25 @@
 	.blog-category {
 		margin-top: 50px !important;
 	}
-	.about-blog {
-		margin-top: 150px !important;
-	}
 }
-.blog-content {
+.blog-carousel-left {
+	height: 10% !important;
+	left: 9% !important;
+}
+#myCarousel {
+	margin-bottom: 0 !important;
+}
+.blog-carousel-right {
+	height: 10% !important;
+	right: 9% !important;
+}
+.blog-content-col {
 	width: 100%;
 	float: left;
 	margin-top: 105px;
 	margin-bottom: 40px;
 }
-.blog-content ul {
+.blog-content-col ul {
 	padding-left: 0; 
 	margin-bottom: 0;
 }
@@ -79,7 +87,7 @@
 	width: 100%;
 	float: left;
 }
-.blog-duis h5 {
+.blog-duis h5 a {
 	font-size: 24px;
 	color: #76c7c0;
 	margin-top: 35px;
@@ -88,12 +96,16 @@
 .blog-posted {
 	margin-bottom: 35px !important;
 }
-.blog-content p {
+.blog-content-col p {
 	font-size: 14px;
 	color: #7f8c8c;
 }
 .blog-duis span {
 	color: #e2534b;
+}
+.blog-posted i {
+	margin-left: 15px;
+	margin-right: 5px;
 }
 .blog-calendar {
 	width: 100%;
@@ -184,7 +196,7 @@
 .tags ul li {
 	margin-bottom: 0;
 	padding: 0;
-	margin-right: 6px;
+	margin-right: 0;
 	border-bottom: none;
 }
 .tags ul li:last-child {

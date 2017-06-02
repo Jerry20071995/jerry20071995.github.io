@@ -17,12 +17,15 @@
 		font-size: 13px !important;
 		padding: 11px 25px !important;
 	}
+	.carousel  {
+		margin-bottom: 70px !important;
+	}
 }
 .item .fill img {
 	width: 100%;
 }
 .carousel-indicators {
-	bottom: -12%;
+	bottom: -7%;
 }
 .carousel-indicators li {
 	background: #b0b8b9;
@@ -51,7 +54,7 @@
 	padding-top: 4%;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
-	left: 5%;
+	left: 6%;
 }
 .carousel-control .icon-next {
 	width: 21%;
@@ -60,7 +63,7 @@
 	padding-top: 4%;
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
-	right: 5%;
+	right: 6%;
 }
 .carousel-control .icon-prev:before {
 	content: normal;
@@ -72,6 +75,38 @@
 	width: 100%;
 	float: left;
 	margin-bottom: 95px;
+	margin-top: 95px;
+}
+.slider {
+	width: 100%;
+}
+.slide img {
+	width: 100%;
+}
+.side-bar {
+	width: 100%;
+}
+.side-bar h5 {
+	font-size: 16px;
+	font-weight: 800;
+	color: #7f8c8c;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+.side-bar .list-inline li {
+	padding-right: 18px; 
+}
+.side-bar .list-inline li:last-child {
+	padding-right: 0px; 
+}
+.side-bar .list-inline {
+	margin-bottom: 25px;
+}
+.side-bar .list-inline li img {
+	width: 70px;
+	height: 65px;
+	border-bottom: 3px solid #e5e6e6;
+	border-radius: 7px;
 }
 .w3-content {
 	width: 100%;
@@ -161,7 +196,7 @@
 	background: #f3f3f3;
 }
 .nav-tabs > li {
-	margin-right: 10px;
+	margin-right: 7px;
 }
 .nav-tabs > li > a {
     color: #7f8c8c;
@@ -193,6 +228,7 @@
 	color: #777777;
 	text-align: left;
 	word-spacing: 2px;
+	margin-bottom: 15px;
 }
 .title-avatar {
 	width: 100%;
@@ -367,7 +403,6 @@
 	width: 100%;
 	float: left;
 	margin-top: 50px;
-	margin-bottom: 95px;
 }
 #features-01_ {
 	position:absolute;
