@@ -102,6 +102,10 @@ a:hover {
 	.choose-first h6 {
 		margin-left: -35% !important;
 	}
+	.navbar-default .navbar-toggle {
+		border-color: #fff;
+    	color: #fff;
+	}
 }
 .search_view {
 	display: none;
