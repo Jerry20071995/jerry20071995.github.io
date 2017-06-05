@@ -118,6 +118,9 @@ a:hover {
 	.detail {
 		float: right;
 	}
+	.navbar-right {
+		float: left !important;
+	}
 }
 .search_view {
 	display: none;
