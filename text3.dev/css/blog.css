@@ -48,6 +48,9 @@
 	.blog-category {
 		margin-top: 50px !important;
 	}
+	.blog-category {
+		margin: 0 auto;
+	}
 }
 .blog-carousel-left {
 	height: 10% !important;
