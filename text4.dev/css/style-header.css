@@ -1,0 +1,136 @@
+body {
+    color: #000;
+    font-size: 16px;
+    width: 100vw;
+    overflow-x: hidden;
+}
+a:hover{
+	text-decoration: none;
+}
+.logo{
+	z-index: 15;
+    position: absolute;
+    margin-left: 8.33333333%;
+    top: 1em;
+    transition: all .2s ease-out;
+    transform: scale(1);
+}
+.logo img{
+	width: 7.1875em;
+}
+nav#block-mos-main-menu{
+	background-color: #fff;
+    height: 5.625em;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+nav#block-mos-main-menu ul {
+    font-size: .875em;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+nav#block-mos-main-menu ul li {
+    padding: 0 .9375em;
+    position: relative;
+    align-items: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+nav#block-mos-main-menu ul li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: #333;
+}
+.main-menu {
+    top: 0em;
+    height: .625em;
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+}
+.main-menu__border, .pattern--red {
+    background-size: 150px;
+    background-image: url(../images/background1.png);
+}
+.mobile_hug{
+	display: none;
+}
+.slider_home img{
+	width: 100%;
+}
+.mobile_hug {
+    z-index: 14;
+    padding: .9375em;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity,filter;
+    transition-duration: .15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+    display: none;
+}
+#block-mos-branding.reduced {
+    transform: scale(.7) translate(0,-27px) !important;
+}
+@media (max-width: 768px){
+	.mobile_hug{
+		display: block;
+		position: relative;
+	}
+	.logo{
+	    z-index: 10;
+	    width: 100%;
+	    margin: 0 auto;
+	    text-align: center;
+	    top: .75em;
+	    left: 0;
+	    right: 0;
+	}
+	nav#block-mos-main-menu{
+		display: none;
+	}
+	.logo img{
+		width: 6.25em;
+		margin: 0 auto;
+	}
+	.main-fixed-menu {
+	    height: 4.6875em;
+	}
+	.main-menu {
+	    top: 0;
+	}
+	nav#block-mos-main-menu ul{
+		width: 100%;
+		position: relative;
+		z-index: 8;
+		background: #fff;
+		margin-top: 2em;
+	}
+	nav#block-mos-main-menu ul{
+		display: block;
+	}
+	nav#block-mos-main-menu ul li {
+	    flex-direction: column;
+	    padding: .9375em 0;
+	    display: block;
+	}
+}
