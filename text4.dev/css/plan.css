@@ -1,0 +1,15 @@
+.plan-tab {
+	width: 100%;
+	float: left;
+}
+.nav-tabs {
+	border-bottom: none;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	border: none;
+	color: #000;
+}
+.nav-tabs .active {
+	border-bottom: 1px solid #000;
+	text-align: center;
+}
