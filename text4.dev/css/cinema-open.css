@@ -1,0 +1,33 @@
+.cinema-come {
+	text-align: left;
+}
+.promotions-content h2 {
+	margin-top: 2em;
+}
+.cinema-contact {
+	width: 100%;
+	float: left;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align: center;
+	background: url(../images/background3.png);
+	background-size: 300px;
+}
+.cinema-contact h3 {
+	font-size: 1.35em;
+	line-height: 1.62em;
+	color: #fff;
+}
+.cinema-hier {
+	width: 100%;
+	float: left;
+	background: #874896;
+	text-align: center;
+	margin-bottom: 2.5em;
+}
+.cinema-hier h6 {
+	color: #fff;
+	margin-top: 1.75em;
+	margin-bottom: 3.75em;
+
+}
