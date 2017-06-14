@@ -1,15 +1,25 @@
+.promotions {
+	background: url(../images/sup_mos_foodcourt_cam03_005_web_0.jpg) !important;
+}
 .promotions-content {
 	width: 100%;
 	float: left;
 	text-align: center;
+	color: #3f3f3f;
 }
 .promotions-content h2 {
 	text-transform: uppercase;
 	font-size: 1.943775em;
 	line-height: 2.02em;
-	font-weight: normal;
+	font-family: fedraLight;
+	font-weight: 400;
+	font-style: normal;
+	color: #3f3f3f;
 }
 .come-back {
 	padding-top: 2.626em;
 	padding-bottom: 2.625em;
+}
+.main .promotions .news-title strong {
+	font-family: fedrabold;
 }
