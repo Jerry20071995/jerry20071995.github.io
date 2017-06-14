@@ -1,13 +1,15 @@
+.plan {
+	background: url(../images/Selection_032.png) !important;
+}
 .plan-tab {
 	width: 100%;
 	float: left;
 	text-align: center;
 }
-.plan-tab ul {
-	display: flex;
-	margin-left: 43%;
-	margin-bottom: 0;
 
+.plan-tab li {
+	display: inline-block;
+	text-align: center;
 }
 .tabs-button a {
 	padding: 1em;
@@ -31,7 +33,7 @@
 .plan-heute {
 	width: 100%;
 	float: left;
-	background: #efefef;
+	background: linear-gradient(to bottom,rgba(198,198,198,.35) 0,#fff 100%);
 }
 .heute-time {
 	padding-top: 4.375em;
@@ -41,12 +43,89 @@
 }
 .heute-time h3 {
 	font-size: 1.35em;
-	font-weight: 800;
+	font-family: fedraMedium;
 	line-height: 1.62em;
+	margin: 0;
+	font-weight: normal;
 }
 .heute-time h2 {
 	text-transform: uppercase;
-	font-size: 2em;
+	font-size: 1.94375em;
 	line-height: 2.02em;
-	font-family: 400;
+	font-family: fedraLight;
+	margin: 0;
+	font-weight: 400;
+	font-style: normal;
+}
+.main .plan-content .plan-heute .plan-box {
+	border: .0625em solid #dad5c0;
+}
+.main .plan-content .plan-heute .plan-box .plan-mall {
+	width: 100%;
+	margin: 1.875em auto;
+	max-width: 25em;
+}
+.main .plan-content .plan-heute .plan-box .plan-mall .input-group .btn-secondary {
+	width: 100%;
+	text-align: left;
+	background: none;
+	border-bottom: .0625em solid #000;
+	padding: 0;
+	padding-bottom: 0.5em;
+	position: relative;
+	font-size: 16px;
+	font-family: fedrabook;
+}
+.main .plan-content .plan-heute .plan-box .plan-mall .input-group .btn-secondary:after {
+	display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .3em;
+    vertical-align: middle;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-left: .3em solid transparent;
+    position: absolute;
+    right: 0;
+}
+.main .plan-content .plan-heute .plan-box .plan-mall .input-group .dropdown-menu ul {
+	padding: 0;
+	border-radius: 0.125em;
+}
+.main .plan-content .plan-heute .plan-box .plan-mall .input-group .dropdown-menu ul li {
+	padding: 0.625em;
+}
+.main .plan-content .plan-heute .plan-box .plan-mall .mall-infomation {
+	display: inline-block;
+	margin-right: 1em;
+	margin-top: 1.875em;
+	width: 100%;
+}
+.main .plan-content .plan-heute .plan-box .plan-mall .mall-infomation .office-hours {
+	width: 100%;
+	float: left;
+}
+.main .plan-content .plan-heute .plan-box .plan-mall .mall-infomation .office-hours .office-name {
+	width: 50%;
+	float: left;
+	font-family: fedrabold;
+	padding-bottom: 0.625em;
+}
+.main .plan-content .plan-heute .plan-box .plan-mall .mall-infomation .office-hours .office-time {
+	width: 50%;
+	float: left;
+	padding-bottom: 0.625em;
+	font-family: fedrabook;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 16px;
+}
+
+.col-restaurants {
+	text-align: center;
+	margin-bottom: 4.375em;
+}
+.plan-bottom {
+	padding-bottom: 2.625em;
 }
