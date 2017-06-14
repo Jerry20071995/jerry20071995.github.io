@@ -1,6 +1,10 @@
 .news-top {
 	width: 100%;
 	float: left;
+	background: url(../images/banner-news-express.jpg);
+	height: 25em;
+	background-position: center;
+	background-size: cover;
 	position: relative;
 }
 .news-top:before {
@@ -17,60 +21,76 @@
     height: 10px;
     z-index: 2;
 }
-.news-top img {
-	width: 100%
+.news-top:after {
+	content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.15);
 }
 .news-title {
-	width: 100%;
-	float: left;
 	position: absolute;
-	top: 45%;
-	text-align: center;
-	color: #fff;
+    text-align: center;
+    width: 100%;
+    display: inline-table;
+    vertical-align: middle;
+    margin: auto;
+    z-index: 999;
+    top: 45%;
+    transform: translateY(-45%);
+    text-shadow: 0 0 30px rgba(0,0,0,.2);
+    color: #fff;
 }
 .news-title h1 {
 	font-size: 2.0625em;
 	line-height: 2.3325em;
 	text-transform: uppercase;
-	font-weight: 800;
+	font-family: fedrabold;
 	margin-bottom: 0;
 }
 .news-title h3 {
 	font-size: 1.125em;
 	line-height: 1.35em;
-	font-style: italic;
-	font-weight: 300;
+	font-family: fedraItalic;
 	margin: 0;
+	font-weight: normal;
 }
 .news-content {
 	width: 100%;
 	float: left;
-	margin-top: 80px;
+	margin-top: 4.375em;
 }
-.box {
-	border: 0.125em solid #dad5c0; 
+.news-main .news-content .box a {
+	width: 90%;
+    border: .125em solid #dad5c0;
+    position: relative;
+    overflow: hidden;
+    display: block;
 }
 .box-content {
 	padding: 1.75em;
 	color: #3f3f3f;
 }
 .box-content span {
-	font-size: 1.3em;
-    font-style: italic;
+    font-family: fedraItalic;
+    font-weight: 400;
 }
 .box-content h3 {
+	font-family: fedraMedium;
 	margin-top: 10px;
 	margin-bottom: 30px;
+	font-size: 1.35em;
+	line-height: 1.62em;
+	margin: 0;
+	font-weight: 400;
+
 }
-.box-content a {
-	font-size: 1.4em;
-    line-height: 1.3em;
-    color: #3f3f3f;
-}
+
 .box-content p {
-	font-size: 1.3em;
+	font-family: fedrabook;
+	font-size: 1em;
 	line-height: 1.6em;
-}
-.box-last {
-	margin-right: 0;
+	margin: 0;
+	font-weight: 400;
+	padding-top: 0.625em;
 }
