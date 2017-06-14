@@ -1,0 +1,269 @@
+@media only screen and (max-width: 479px) {
+	.tools {
+		margin-left: 70% !important;
+	}
+	.logo img {
+		width: 6.25em !important;
+	}
+	.logo {
+		position: absolute;
+		left: 6.5em;
+		top: 0.7em !important;
+			
+	}
+	.edit-logo {
+		transform: scale(.7) translate(0,-27px);
+		top: 0.8em !important;
+	}
+	.navbar-header {
+		float: left;
+		margin-left: 50px;
+	}
+	.navbar-default {
+		height: 100% !important;
+		display: block !important;
+	}
+	.navbar-default .navbar-nav {
+		display: block !important;
+		
+	}
+	.navbar-default .navbar-nav > .active, .navbar-default .navbar-nav > .active:hover, .navbar-default .navbar-nav > .active:focus {
+		background-color: #fff !important;
+	}
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+		background-color: #fff !important;
+		color: #e30613 !important;
+	}
+	.navbar-default .navbar-toggle {
+		margin-top: 1.8em !important;
+		float: left !important;	
+	}
+	.toolbar .search-toggler {
+		margin-left: 0.5em !important;
+		margin-top: -0.25em !important;
+	}
+	.main-fixed-menu {
+		height: 4.6875em !important;
+	}
+	.toolbar {
+		height: 4.6875em !important;
+		margin-left: 0em;
+	}
+	.navbar-default .navbar-collapse {
+		height: 0 !important;
+		position: absolute;
+		top: 6em;
+		width: 100%;
+		border: none;
+	}
+	/* footer */
+	.footer .top-footer .top-footer-row .news-letter-form {
+		padding-top: 1.75em;
+	}
+	.caret {
+		top: 2em !important;
+	}
+	.searchbar-container {
+		padding: 0 !important;
+	}
+	.searchbar-container .fa-search {
+		left: 1em !important;
+	}
+	.search-container-main .searchbar-container .searchbar-form {
+		width: 59%;
+	}
+	
+	.searchbar-hide {
+		margin-top: -1.5em !important;
+		margin-left: 93% !important;
+	}
+	.main .main-content .main-hour ul {
+		width: 100vw;
+		margin: 0;
+	}
+	.main .main-content .main-hour .hour-quick {
+		font-size: 12px !important;
+	}
+	.main .main-explore .main-restaurant .main-shop .first-col {
+		padding-left: 15px;
+	}
+	.main .main-explore .main-restaurant .main-shop .shop-img {
+		width: 35%;
+		display: inline-block;
+	}
+	.main .main-explore .main-restaurant .main-shop .shop-content {
+		display: inline-block;
+		width: 63%;
+	}
+	.main .main-explore .main-restaurant .restaurant-bottom {
+		padding-bottom: 0.625em; 
+	}
+	.main-form input {
+		width: 80% !important;
+	}
+	.main-form i {
+		right: 12% !important;
+	}
+	.main .open-poisition .open-slider-content {
+		margin: 0 !important;
+	}
+	.right-arrow {
+		left: 1em !important;
+	}
+	.left-arrow {
+		right: 1em !important;
+	}
+	.col-mt4 {
+		margin-top: 2.625em;
+	}
+
+}
+@media only screen and (max-width: 767px) { 
+	.navbar-nav > li > .dropdown-menu {
+		text-align: center;
+	}
+	.navbar-default .navbar-nav {
+		display: block !important;
+		height: auto !important;
+		background: #fff;
+		padding-top: 2em;
+	}
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		border: none;
+	}
+
+	
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+
+	.caret {
+		right: -1.5em !important;
+		top: 0.5em !important;
+	}
+    .navbar-header {
+        float: none;
+    }
+	.tools {
+		margin-left: 78% !important;
+	}
+	.logo img {
+		width: 6.25em !important;
+	}
+	.logo {
+		position: absolute;
+		left: 35% !important;
+		top: 0.7em !important;
+			
+	}
+	.edit-logo {
+		transform: scale(.7) translate(0,-27px);
+		top: 1em !important;
+	}
+	.navbar-header {
+		float: left;
+		margin-left: 15%;
+	}
+	.navbar-default {
+		height: 100% !important;
+		display: block !important;
+	}
+	.navbar-default .navbar-nav {
+		display: block !important;
+		height: auto !important;
+		background: #fff;
+	}
+	.navbar-default .navbar-nav > .active, .navbar-default .navbar-nav > .active:hover, .navbar-default .navbar-nav > .active:focus {
+		background-color: #fff !important;
+	}
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+		background-color: #fff !important;
+		color: #e30613 !important;
+	}
+	.navbar-default .navbar-toggle {
+		margin-top: 1.8em !important;
+		
+	}
+	.toolbar .search-toggler {
+		margin-left: 0.5em !important;
+		margin-top: -0.25em !important;
+	}
+	.main-fixed-menu {
+		height: 4.6875em !important;
+	}
+	.toolbar {
+		height: 4.6875em !important;
+	}
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+        padding: 0.9375em 0 !important;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+        position: absolute;
+        top: 4.8em;
+        width: 100%;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+    .navbar-default .navbar-collapse {
+		height: 0 !important;
+	}
+	.searchbar-container {
+		width: 56% !important;
+	}
+
+	/* footer */
+	.footer .top-footer .top-footer-row .news-letter-form {
+		padding-top: 1.75em;
+	}
+	.main .main-explore .main-restaurant .main-shop .shop-img img {
+		width: 100%;
+		height: 249px;
+	}
+	.main .main-explore .main-restaurant .restaurant-bottom {
+		padding-bottom: 4.375em; 
+	}
+	
+}
+@media only screen and (max-width: 992px) {
+	.footer .end-footer li {
+		width: 50%;
+	    float: left;
+	    position: relative;
+	    min-height: 1px;
+	    text-align: center;
+	}
+	
+}
+@media only screen and (max-width: 1200px) {
+	.main-slider .single-item .slick-inner {
+    	height: calc(100vh - 64px - 85px);
+ 
+    }
+}

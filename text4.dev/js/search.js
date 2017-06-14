@@ -1,6 +1,10 @@
-$( ".nut_search i" ).click(function() {
-  $( "#search-form" ).show()
+$( ".search-toggler i" ).click(function() {
+  $( ".search-container-main" ).show()
   });
-$( "#search-form .fa-times" ).click(function() {
-  $( "#search-form" ).hide() 
+$( ".searchbar-hide" ).click(function() {
+  $( ".search-container-main" ).hide() 
   });
+
+$( ".navbar-header .navbar-toggle" ).click(function() {
+  $( "#logo" ).addClass("edit-logo")
+});

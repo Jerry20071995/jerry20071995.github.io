@@ -15,38 +15,51 @@
 
  */
 /* global window, document, define, jQuery, setInterval, clearInterval */
-$(document).on('ready', function() {
-    $('.center').slick({
-        autoplay: false,
-      centerMode: true,
-      centerPadding: '60px',
-      slidesToShow: 3,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
-          }
-        }
-      ]
-    });
+$(document).ready(function(){
+  $('.single-item').slick({
+        dots:true,
+        autoPlay: true,
+        autoplaySpeed: 2000,
+  });
+   $('.center').slick({
+          centerMode: true,
+          centerPadding: '60px',
+          slidesToShow: 3,
+          prevArrow: '<img src="images/left-white.png" class="pre" alt="pre" />',
+            nextArrow: '<img src="images/right-white.png" class="next" alt="next" />',
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1,
+              }
+            }
+          ]
+        });
+       
 
-    $('.single-item').slick();
 
+    $(".regular").slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 3,
+        prevArrow: '<img src="images/left.png" class="right-arrow" alt="pre" />',
+        nextArrow: '<img src="images/right.png" class="left-arrow" alt="next" />'
+      });
 });
-
 (function(factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
@@ -76,8 +89,8 @@ $(document).on('ready', function() {
                 appendDots: $(element),
                 arrows: true,
                 asNavFor: null,
-                prevArrow: '<img src="images/right-white.png" class="next" alt="next" />',
-                nextArrow: '<img src="images/left-white.png" class="pre" alt="pre" />',
+                prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button">Previous</button>',
+                nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button">Next</button>',
                 autoplay: false,
                 autoplaySpeed: 3000,
                 centerMode: false,
