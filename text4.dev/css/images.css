@@ -308,10 +308,7 @@ button {
 .box {
   background: #fff;
   margin-bottom: 48px;
-  font-size: 11px;
-  line-height: 1.4em;
   float: left;
-  margin-right: 2%;
 
 }
 .box-last {
@@ -346,13 +343,9 @@ button {
 .col1 { width: 80px; }
 .col2 { width: 180px; }
 .col3 { width: 23%; }
-.col4 { width: 31%; }
+.col4 { width: 33.33333333%; }
 .col5 { width: 480px; }
 
-.col1 img { max-width: 80px; }
-.col2 img { max-width: 180px; }
-.col4 img { max-width: 380px; }
-.col5 img { max-width: 480px; }
 
 /**** Gutters ****/
 

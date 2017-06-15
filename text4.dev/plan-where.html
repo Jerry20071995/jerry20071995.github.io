@@ -12,10 +12,9 @@
 	<link rel="stylesheet" href="css/images.css">
 	<link rel="stylesheet" href="css/slick-theme.css">
 	<link rel="stylesheet" href="css/news.css">
-	<link rel="stylesheet" href="css/shop.css">
-	<link rel="stylesheet" href="css/shop.css">
-	<link rel="stylesheet" href="css/promoutions.css">
-	<link rel="stylesheet" href="css/cinema-open.css">
+	<link rel="stylesheet" href="css/plan.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/plan-where.css">
 </head>
 <body>
 	<div class="wapper">
@@ -101,33 +100,191 @@
 
 				</div><!--header-social-->	
 		</header><!-- /header -->
+
+
 		<div class="main">
-			<div class="news-top news-cinema">
+			<div class="news-top plan">
 				<div class="news-title">
-					<h1>kino</h1>
-					<h3>kino</h3>
+					<h1>plan your visit where</h1>
 				</div><!--news-title-->
 			</div><!--news-top-->
-			<div class="cinema-content">
-				<div class="container">
-					<div class="promotions-content">
-						<h2>Kinoeröffnung</h2>
-						<div class="come-back cinema-come">
-							<p>Am 5. September eröffnet das Kino in der mall of Switzerland mit insgesamt 12 Sälen. <br />Die Säle sind ausgestattet mit modernster Technik.......</p>
+			<div class="plan-content">
+				<div class="plan-tab">
+					<div class="container">
+
+							<li class="tabs-button ">
+								<a href="#" title="when">When</a>
+							</li>
+							<li class="tabs-button plan-active">
+								<a href="#" title="when">Where</a>
+							</li>
+							<li class="tabs-button">
+								<a href="#" title="when">Who</a>
+							</li>
+					
+					</div><!--container-->
+				</div><!--plan-tab-->
+			</div><!--news-content-->
+			<div class="where-background">
+				<div class="container where-pt-4">
+					<div class="col-xs-12 col-sm-5">
+						<div class="where-img">
+							<p><img src="images/iphone_alt_medium_0.jpg" alt="iphone"></p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-7">
+						<div>
+
+						  <!-- Nav tabs -->
+						  <ul class="nav nav-tabs" role="tablist">
+							    <li role="presentation" class="active">
+							    	<a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+							    		<div class="tab-button icon">
+							    			<div class="icon icon-car">
+							    			</div>
+							    		</div>
+							    	</a>
+							    </li>
+							    <li role="presentation">
+							    	<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+							    		<div class="tab-button icon">
+							    			<div class="icon icon-subway">
+							    			</div>
+							    		</div>
+							    	</a>
+							    </li>
+							    <li role="presentation">
+							    	<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">
+							    		<div class="tab-button icon">
+							    			<div class="icon icon-bicycle">
+							    			</div>
+							    		</div>
+							    	</a>
+							    </li>
+							    <li role="presentation">
+							   		<a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
+							   			<div class="tab-button icon">
+							    			<div class="icon icon-walking">
+							    			</div>
+							    		</div>
+							   		</a>
+							   	</li>
+						  </ul>
+
+						  <!-- Tab panes -->
+						  <div class="tab-content">
+						    <div role="tabpanel" class="tab-pane active" id="home">
+						    	<h2 class="tex-align-center">parking</h2>
+						    	<div class="parking-table">
+						    		<table>
+						    		 <tbody>
+								      <tr>
+								        <td>0-1H</td>
+								        <td>1-2h</td>
+								      </tr>
+								      <tr>
+								        <td>12</td>
+								        <td>16</td>
+								      </tr>
+								      <tr>
+								        <td>30</td>
+								        <td>30</td>
+										</tr>
+								    </tbody>
+								  </table>
+								  <p>DD</p>
+						    	</div><!--parking-table-->
+						    </div>
+						    <div role="tabpanel" class="tab-pane" id="profile">
+						    	<div class="section-sbb">
+						    		<div class="row">
+						    			<div class="col-xs-12 col-sm-5 col-md-5 mb-3">
+						    				<img src="images/SBB-Logo-min.png" alt="">
+						    			</div>
+						    			<div class="form-sbb">
+						    				<form action="#" method="post">
+						    					<fieldset>
+						    						<div>
+						    							<div class="row">
+						    								<div class="col-xs-12 col-sm-6 col-md-5 mb-4">
+						    									<div class="dropup">
+																    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Von:
+																    <span class="caret"></span></button>
+																    <ul class="dropdown-menu">
+																    	<li><a href="#">Von:</a></li>
+																      <li><a href="#">Station/Stop</a></li>
+																      <li><a href="#">City, Street no</a></li>
+																      <li><a href="#">Point of Interest</a></li>
+																    </ul>
+																  </div>
+						    								</div>
+						    								<div class="col-xs-12 col-sm-6 col-md-7 mb-4">
+						    									<input type="text" value="" size="16" name="REQ0JourneyStopsSG">
+						    								</div>
+						    							</div><!--row-->
+											    		<div class="row">
+											    			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 mb-3 ">
+											    				<div class="col-xs-3 col-sm-4 col-md-3 ">
+											    					An:
+											    				</div>
+											    				<div class="col-xs-9 col-sm-8 col-md-9">
+											    					<span class="Luzern">Luzern</span>
+											    				</div>
+											    			</div>
+											    			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 mb-3">
+											    				<div class="col-xs-3 col-sm-4 col-md-3">
+											    					Datum:
+											    				</div>
+											    				<div class="col-xs-9 col-sm-8 col-md-9">
+											    					<span class="Luzern">14.06.17</span>
+											    				</div>
+											    			</div>
+											    		</div><!--row-->
+											    		<div class="row mb-4 mb-3">
+											    			<div class="col-xs-3 col-sm-2 col-md-1 zeit">
+											    				Zeit: 
+											    			</div>
+											    			<div class="col-xs-9 col-sm-10 col-md-11">
+											    				<input type="text" class="REQ0JourneyTime" value="15:28" size="5" class="REQ0JourneyTime" name="REQ0JourneyTime">
+											    			</div>
+											    		</div><!--row-->
+											    		<div class="row ">
+													    	<div class="nowrap">
+													    		<div class="radio-item">
+													    			<input type="radio" value="1" class="radio">
+													    			Departure
+													    		</div><!--radio-item-->
+													    		<div class="radio-item">
+													    			<input type="radio" value="1" class="radio">
+													    			Arrival
+													    		</div><!--radio-item-->
+													    	</div><!--nowrap-->
+													    </div><!--row-->
+						    						</div>
+						    					</fieldset>
+						    					<div class="form-submit">
+						    						<div class="submit-form">
+						    							<input type="submit" class="search-sbb" value="Search connection">
+						    						</div>
+						    					</div><!--form-submit-->
+						    				</form>
+						    			</div><!--form-sbb-->
+						    		</div><!--row-->
+						    		
+							    </div>
+						    </div>
+						    <div role="tabpanel" class="tab-pane" id="messages"></div>
+						    <div role="tabpanel" class="tab-pane" id="settings"></div>
+						  </div>
+
 						</div>
 					</div>
 				</div><!--container-->
-				<div class="cinema-contact">
-					<h3>Contact Presse</h3>
-				</div><!--cinema-contact-->
-				<div class="cinema-hier">
-					<div class="container">
-						<h6>Hier die KOntaktdaten der Pressestelle angeben <br /> email usw.</h6>
-					</div><!--container-->
-				</div><!--cinema-hier-->
-			</div><!--news-content-->
+			</div><!--where-background-->
 		</div><!--main-->
-		<div class="footer shop-footer">
+
+
+		<div class="footer">
 			<div class="top-footer">
 				<div class="row top-footer-row">
 					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-align-center">

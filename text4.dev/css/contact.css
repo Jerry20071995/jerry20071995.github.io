@@ -1,0 +1,64 @@
+.wapper .main .news-contact {
+	background: url(../images/7_swiss_shops_am_tag_vollbild.jpg);
+}
+.wapper .main .shop-content .mt4 {
+	margin-top: 2.625em;
+}
+.wapper .main .shop-content .mt4 .text-intro {
+	padding: 0 .625em;
+}
+.wapper .main .shop-content .mt4 .normal-form {
+	padding: 0 .625em;
+}
+.wapper .main .shop-content .mt4 .normal-form .form-group option {
+	padding: 1em;
+	font-size: 16px;
+	color: #3f3f3f;
+	line-height: 28px;
+}
+.wapper .main .shop-content .mt4 .normal-form .mb-4 {
+	margin-bottom: 4.375em;
+}
+.wapper .main .shop-content .pt4 {
+	padding-bottom: 2.625em;
+}
+.wapper .main .shop-content .mt4 .normal-form legend {
+	text-align: center;
+    margin-bottom: 1.75em;
+    font-size: 1.35em;
+    line-height: 1.62em;
+    color: #3f3f3f;
+    width: 100%;
+    font-family: fedraMedium;
+    font-weight: 400;
+}
+.wapper .main .shop-content .mt4 .normal-form fieldset input {
+	margin-top: .9375em;
+    margin-bottom: .9375em;
+    height: 2em;
+    width: 100%;
+    color: #3f3f3f;
+    border: none;
+    border-bottom: .0625em solid #000;
+}
+.pd-left {
+	padding-left: 0;
+}
+.pd-right {
+	padding-right: 0;
+}
+.wapper .main .shop-content .mt4 .normal-form .edit-action {
+	margin: 2.625em auto;
+    text-align: center;
+   
+}
+.wapper .main .shop-content .mt4 .normal-form .edit-action input {
+	background: #3f3f3f;
+    color: #fff;
+    text-transform: uppercase;
+    border: 0;
+    height: 2.75em;
+    line-height: 2.75em;
+    padding: 0 1.25em;
+    font-family: fedraMedium;
+}

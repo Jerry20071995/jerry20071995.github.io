@@ -1,0 +1,197 @@
+.wapper .main .where-background {
+	width: 100%;
+	float: left;
+	background: linear-gradient(to bottom,rgba(198,198,198,.35) 0,#fff 100%);
+}
+.wapper .main .where-background .where-pt-4 {
+	padding-top: 2.625em;
+}
+.wapper .main .where-background .where-pt-4 .where-img img {
+	max-width: 100%;
+}
+.wapper .main .where-background .nav-tabs {
+	margin-bottom: 2.625em;
+}
+.wapper .main .where-background .nav-tabs .active {
+	border: .0625em solid #000;
+    border-bottom: none;
+    
+    padding: .625em .875em;
+}
+.wapper .main .where-background .nav-tabs .active .icon {
+	opacity: 1 !important;
+}
+.wapper .main .where-background .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	color: #000;
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+}
+.wapper .main .where-background .nav-tabs > li.active 
+.wapper .main .where-background .nav-tabs .tab-button {
+	padding: .625em .875em;
+}
+.wapper .main .where-background .nav-tabs .tab-button .icon {
+	width: 1.875em;
+    margin: 0 auto;
+    opacity: 0.5;
+    height: 1.875em;
+    text-align: center;
+
+}
+.wapper .main .where-background .nav-tabs .tab-button .icon-car {
+	background: url(../images/car.png);
+	background-repeat: no-repeat;
+	background-size: 1.875em 1.875em;
+}
+.wapper .main .where-background .nav-tabs .tab-button .icon-subway {
+	background: url(../images/subway.png);
+	background-repeat: no-repeat;
+	background-size: 1.875em 1.875em;
+}
+.wapper .main .where-background .nav-tabs .tab-button .icon-bicycle {
+	background: url(../images/bike.png);
+	background-repeat: no-repeat;
+	background-size: 1.875em 1.875em;
+}
+.wapper .main .where-background .nav-tabs .tab-button .icon-walking {
+	background: url(../images/walkig.png);
+	background-repeat: no-repeat;
+	background-size: 1.875em 1.875em;
+}
+.wapper .main .where-background .tab-content .tex-align-center {
+	text-align: left;
+	text-transform: uppercase;
+	font-size: 1.94375em;
+	line-height: 2.02em;
+	font-family: fedraLight;
+
+}
+.wapper .main .where-background .tab-content .parking-table table {
+	margin-bottom: 1.75em;
+	margin-top: 1.75em;
+}
+.wapper .main .where-background .tab-content .parking-table table tr td {
+	padding: .375em 1.125em;
+    border: .0625em solid #dad5c0;
+    font-family: fedrabook;
+    font-weight: 400;
+    font-style: normal;
+}
+.wapper .main .where-background .tab-content .section-sbb .row {
+	padding-left: 1.875em;
+}
+.wapper .main .where-background .tab-content .section-sbb .mb-3 {
+	margin-bottom: 1.75em;
+}
+.wapper .main .where-background .tab-content .section-sbb .mb-3 img {
+	max-width: 100%;
+}
+.wapper .main .where-background .tab-content .section-sbb .form-sbb {
+	width: 100%;
+	float: left;
+}
+.wapper .main .where-background .tab-content .section-sbb .form-sbb .dropup {
+	height: 2.375em;
+	border-bottom: .0625em solid #000;
+}
+.wapper .main .where-background .tab-content .section-sbb .form-sbb .dropdown-toggle {
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	background-color: transparent;
+	text-align: left;
+	font-size: 16px;
+	line-height: 28px;
+	padding-left: 0;
+}
+.wapper .main .where-background .tab-content .section-sbb .form-sbb .dropdown-toggle .caret {
+	position: absolute;
+	top: 1em;
+	right: 0;
+}
+.wapper .main .where-background .tab-content .section-sbb .form-sbb  .dropdown-menu {
+	border: 1px solid #aaa;
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1051;
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    left: 0;
+    width: 100%;
+}
+.wapper .main .where-background .tab-content .section-sbb .form-sbb .dropdown-menu li {
+	padding: 0.625em;
+	font-size: 16px;
+}
+
+.wapper .main .where-background .tab-content .section-sbb .form-sbb .dropdown-menu li:first-child {
+	background-color: #c6c6c6;
+}
+.wapper .main .where-background .tab-content .section-sbb .form-sbb .dropdown-menu li:first-child a {
+	background-color: #c6c6c6;
+}
+.wapper .main .where-background .tab-content .section-sbb .form-sbb input {
+	width: 93%;
+	margin: 1% 5%;
+	height: 2em;
+	color: #3f3f3f;
+	border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: .0625em solid #000;
+    background-color: transparent;
+}
+.wapper .main .where-background .tab-content .section-sbb .form-sbb .mb-4 {
+	margin-bottom: 2.625em;
+}
+.wapper .main .where-background .tab-content .section-sbb .Luzern {
+	font-family: fedrabold;
+}
+.wapper .main .where-background .tab-content .section-sbb .REQ0JourneyTime {
+	width: 93%;
+	margin-top: -8px !important;
+	height: 2em;
+	color: #3f3f3f;
+	border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: .0625em solid #000;
+    background-color: transparent;
+    margin-top: -0.3em;
+}
+.wapper .main .where-background .tab-content .section-sbb .zeit {
+	padding-left: 30px;
+}
+.wapper .main .where-background .tab-content .section-sbb .form-sbb .nowrap {
+	padding-left: 1.875em;
+}
+.wapper .main .where-background .tab-content .section-sbb .form-sbb .nowrap .radio-item {
+	display: inline-block;
+	margin-right: 15px;
+}
+.wapper .main .where-background .tab-content .section-sbb .form-sbb .nowrap .radio-item .radio {
+	display: inline-block;
+	margin-right: 10px;
+	width: 15%;
+}
+.wapper .main .where-background .tab-content .section-sbb .form-sbb .form-submit {
+	text-align: center;
+}
+.wapper .main .where-background .tab-content .section-sbb .form-sbb .form-submit .submit-form {
+	display: inline-block;
+	margin: 2.625em auto;
+}
+.wapper .main .where-background .tab-content .section-sbb .form-sbb .form-submit .submit-form input {
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #3f3f3f;
+	font-family: fedraMedium;
+	width: 100%;
+	height: auto;
+	padding: 1em;
+}

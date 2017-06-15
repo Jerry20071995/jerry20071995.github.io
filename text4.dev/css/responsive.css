@@ -117,6 +117,21 @@
 		margin-top: 2.625em;
 	}
 
+
+	/* ==== news ==== */
+	.col4 { width: 100% !important; }
+
+	/* ===== plan ==== */
+	.main .plan-content .plan-heute .plan-box .plan-mall form {
+		margin-left: 1em !important;
+		margin-right: 1em !important;
+	}
+
+	/* === job ===*/
+	.wapper .news-main .news-content .job-content .tab-content .tab-item {
+		margin: 1em;
+	}
+
 }
 @media only screen and (max-width: 767px) { 
 	.navbar-nav > li > .dropdown-menu {
@@ -132,7 +147,13 @@
 		border: none;
 	}
 
-	
+	/* === contact === */ 
+	.pd-right {
+		padding-right: 15px !important;
+	}
+	.pd-left {
+		padding-right: 0;
+	}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {

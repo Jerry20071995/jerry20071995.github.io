@@ -1,3 +1,6 @@
+.news-shop {
+	background: url(../images/7_swiss_shops_am_tag_vollbild.jpg);
+}
 .shop-search {
 	margin-top: 50px;
 	width: 100%;
@@ -5,7 +8,7 @@
 }
 .news-title strong {
 	font-style: normal;
-	font-weight: 800;
+	font-family: fedrabold;
 }
 .shop-form {
 	position: relative;
@@ -14,6 +17,7 @@
 	position: absolute;
 	right: 0;
 	top: 0;
+	font-size: 1.5em;
 }
 .shop-form input {
 	width: 100%;
@@ -26,10 +30,12 @@
 	border-radius: 0;
 	border-bottom: 1px solid #000;
 	padding-bottom: 10px;
+	padding-left: 0;
 }
 .shop-gift i {
 	margin-left: 15px;
 	margin-right: 15px;
+	font-size: 1.5em;
 }
 .shop-title {
 	width: 100%;
@@ -94,4 +100,7 @@
 }
 .shop-footer {
 	margin-top: 0;
+}
+.shop-mb {
+	margin-bottom: 1.75em;
 }

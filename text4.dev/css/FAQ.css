@@ -1,0 +1,54 @@
+.wapper .news-main .news-faq {
+	background: url(../images/7_swiss_shops_am_tag_vollbild.jpg);
+}
+.wapper .news-main  .news-content .pt3 {
+	padding-top: 1.75em;
+}
+.wapper .news-main  .news-content .pt3 .pb5 {
+	padding-bottom: 4.375em;
+}
+.wapper .news-main  .news-content .pt3 .pb5 h2 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.94375em;
+    line-height: 2.02em;
+    margin: 0;
+    font-family: fedraLight;
+    font-style: normal;
+    font-weight: 400;
+    color: #3f3f3f;
+}
+.wapper .news-main  .news-content .pt3 .pb5 .accordion {
+	width: 100%;
+	float: left;
+}
+.wapper .news-main  .news-content .pt3 .pb5 .accordion .accordion-item {
+	padding-top: 2.625em;
+	padding-bottom: 1.75em;
+	border-bottom: 1px solid #eceadf;
+}
+.wapper .news-main  .news-content .pt3 .pb5 .accordion .accordion-item .accordion_head {
+	color: #3f3f3f;
+	font-family: fedrabold;
+}
+.wapper .news-main  .news-content .pt3 .pb5 .accordion .accordion-item .accordion_head .plusminus {
+	float: right;
+	font-size: 1.5em;
+}
+.wapper .news-main  .news-content .pt3 .pb5 .accordion .accordion-item .accordion_body {
+	padding-top: 1.75em;
+}
+.wapper .news-main  .news-content .pt3 .pb5 .accordion .accordion-item .accordion_body p {
+	margin: 0;
+}
+.wapper .news-main  .news-content .pt3 .pb5 .accordion .accordion-item .accordion_body p a {
+	font-size: 1em;
+	line-height: 1.6em;
+	color: #3f3f3f;
+	font-weight: 400;
+}
+.wapper .news-main  .news-content .pt4 {
+	width: 100%;
+	float: left;
+	margin-top: 1.75em;
+}

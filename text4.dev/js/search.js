@@ -8,3 +8,7 @@ $( ".searchbar-hide" ).click(function() {
 $( ".navbar-header .navbar-toggle" ).click(function() {
   $( "#logo" ).addClass("edit-logo")
 });
+$( ".dropdown .dropdown-toggle" ).click(function() {
+  $( ".caret" ).addClass("edit-caret")
+});
+

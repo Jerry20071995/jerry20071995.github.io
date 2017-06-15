@@ -1,0 +1,86 @@
+.wapper .news-main .news-job {
+	background: url(../images/vogelperspektive_0.jpg);
+}
+.wapper .news-main .news-content {
+	margin-top: 0;
+}
+.wapper .news-main .news-content .job-title .nav-tabs {
+	border-bottom: none;
+}
+.wapper .news-main .news-content .job-title .nav-tabs .active a {
+	border: none;
+	border-radius: 0;
+	opacity: 1;
+}
+.wapper .news-main .news-content .job-title .nav-tabs > li {
+	position: relative;
+}
+.wapper .news-main .news-content .job-title .nav-tabs > li > a:hover {
+	background: transparent;
+	border: none;
+}
+.wapper .news-main .news-content .job-title .nav-tabs > li > a {
+	padding: 1em;
+    display: block;
+    margin-right: 0;
+    font-family: fedrabook;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    color: #3f3f3f;
+    opacity: 0.5;
+    text-align: center;
+}
+.wapper .news-main .news-content .job-title .nav-tabs > li.active a:after {
+	content: "";
+	width: 25%;
+    height: 1px;
+    bottom: 0;
+    left: 37.5%;
+    border-bottom: .09375em solid #000;
+    display: inline-block;
+    position: absolute;
+}
+.wapper .news-main .news-content .job-content {
+	background: linear-gradient(to bottom,rgba(198,198,198,.35) 0,#fff 100%);
+	padding-top: 2.625em;
+}
+.wapper .news-main .news-content .job-content .tab-content .tab-item {
+	border: .125em solid #dad5c0;
+	
+}
+.wapper .news-main .news-content .job-content .tab-content .tab-item .item-content p {
+	font-size: .875em;
+	padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: .625em;
+    padding-top: .625em;
+    color: #3f3f3f;
+    margin: 0;
+    font-weight: 400;
+}
+.wapper .news-main .news-content .job-content .tab-content .tab-item .item-content {
+	padding-bottom: 0.625em;
+}
+.wapper .news-main .news-content .job-content .tab-content .tab-item .item-content h3 {
+	font-size: 1.35em;
+    line-height: 1.62em;
+    font-family: fedraMedium;
+	padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: .625em;
+    padding-top: .625em;
+    color: #3f3f3f;
+    margin: 0;
+    font-weight: 400;
+}
+.wapper .news-main .news-content .job-content .tab-content .tab-item .item-content span {
+	font-size: .875em;
+	padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: .625em;
+    padding-top: .625em;
+    color: #3f3f3f;
+    margin: 0;
+    font-weight: 400;
+}

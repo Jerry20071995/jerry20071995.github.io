@@ -35,11 +35,26 @@ li {
 a {
 	text-decoration: none;
 }
-a:hover {
+a:hover, a:focus {
 	text-decoration: none;
 }
 input:focus {
 	outline: none;
+	border: none;
+}
+button:focus {
+	outline: 0 !important;
+	background-color: transparent !important;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+select, textarea,input {
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+}
+.fixed{
+	position: fixed !important;
+	z-index: 99999;
 }
 #wapper {
 	width: 100%;
@@ -103,6 +118,12 @@ input:focus {
     height: 100%;
     padding: 0 .9375em;
 }
+.navbar-default .navbar-nav > li:last-child {
+	padding: 0;
+}
+.navbar-default .navbar-nav .dropdown .dropdown-toggle {
+	padding: 0 1.7em 0 0.9375em;
+}
 .navbar-default .navbar-nav > li > a {
 	color: #000;
 	text-transform: uppercase;
@@ -114,6 +135,7 @@ input:focus {
     text-align: center;
     padding: 0;
     font-family: fedraLight;
+    font-weight: 400;
 }
 .navbar-default .navbar-nav > .active , .navbar-default .navbar-nav > .active:hover, .navbar-default .navbar-nav > .active:focus {
 	background: #e30613;
@@ -127,11 +149,11 @@ input:focus {
 	background: #e30613;
 	color: #fff;
 }
+
 .navbar-default .navbar-nav li > a:hover, .navbar-default .navbar-nav li > a:focus {
 	background: #e30613;
 	color: #fff;
 }
-
 .navbar-default .navbar-nav > li .dropdown {
 	display: none;
     top: 90px;
@@ -152,30 +174,33 @@ input:focus {
     padding-top: .3125em;
     padding-bottom: .3125em;
 }
+
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
 	color: #fff;
 	background: #e30613;
 }
-.dropdown-menu {
+.navbar-default .dropdown-menu {
 	width: 100%;
 	padding: 1.25em 0 .9375em;
 	border: none;
 	border-radius: 0;
 }
-.dropdown-menu > li > a {
+.navbar-default .dropdown-menu > li > a {
 	background: #fff !important;
 	font-size: 1em !important;
 	text-transform: capitalize;
 }
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+.navbar-default .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
 	color: #e30613 !important;
 }
-.caret {
+.navbar-default .caret {
 	position: absolute;
-	right: -1em;
+	right: 0.5em;
 	top: 3em;
 }
-
+.navbar-default .edit-caret {
+	transform: rotate(180deg);
+}
 .tools {
 	margin-left: 90%;
 	z-index: 15;
@@ -272,7 +297,7 @@ input:focus {
 .searchbar-container .fa-search {
 	padding-right: 1em;
 	position: absolute;
-	left: 2em;
+	left: 1em;
 	top: 1em;
 }
 .searchbar-container .input {
@@ -280,6 +305,9 @@ input:focus {
 	flex-grow: 2;
 	box-shadow: none;
 	line-height: normal;
+	width: 96%;
+	padding-top: 0.5em;
+
 }
 .searchbar-hide {
 	position: relative;
@@ -1005,7 +1033,8 @@ input:focus {
 .footer .end-footer ul li a {
 	display: inline-block;
     padding: .625em;
-    color: #000;
+    color: #3f3f3f;
+    font-weight: 400;
 }
 .footer .end-footer ul li a:hover, .footer .end-footer ul li a:focus {
 	background: #e30613;

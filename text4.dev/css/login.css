@@ -1,0 +1,49 @@
+.wapper .main .top-login {
+	margin-top: 5em;
+	text-align: center;
+}
+.wapper .main .top-login ul li {
+	display: inline-block;
+	margin: 10px;
+}
+.wapper .main .top-login ul li a {
+	color: #3f3f3f;
+}
+.wapper .main .form-login form {
+	width: 50%;
+    margin: 3% 25%;
+}
+.wapper .main .form-login .form-group label {
+	font-size: 21px;
+	font-weight: 400;
+	color: #000;
+}
+.wapper .main .form-login .form-group .form-control {
+	width: 100%;
+    margin: 6px 0;
+    padding: 6px;
+    color: #3f3f3f;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: .0625em solid #000;
+    border-radius: 0;
+}
+.wapper .main .form-login  p {
+	color: #3f3f3f;
+    margin-bottom: 2.25em;
+    padding-top: .625em;
+    font-size: 1em;
+    line-height: 1.6em;
+    font-weight: 400;
+}
+.wapper .main .form-login .submit {
+	background: #3f3f3f;
+    color: #fff;
+    text-transform: uppercase;
+    border: 0;
+    position: relative;
+    z-index: 99;
+    padding: 0 1.25em;
+    line-height: 2.75em;
+}

@@ -9,16 +9,12 @@
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/slick.css">
-	<link rel="stylesheet" href="css/images.css">
 	<link rel="stylesheet" href="css/slick-theme.css">
-	<link rel="stylesheet" href="css/news.css">
-	<link rel="stylesheet" href="css/shop.css">
-	<link rel="stylesheet" href="css/shop.css">
-	<link rel="stylesheet" href="css/promoutions.css">
-	<link rel="stylesheet" href="css/cinema-open.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-	<div class="wapper">
+	<div class="wapper" id="wapper">
 		<header id="header" class="header">
 				<div class="container-fluid">
 					<div class="row main-fixed-menu">
@@ -101,33 +97,35 @@
 
 				</div><!--header-social-->	
 		</header><!-- /header -->
-		<div class="main">
-			<div class="news-top news-cinema">
-				<div class="news-title">
-					<h1>kino</h1>
-					<h3>kino</h3>
-				</div><!--news-title-->
-			</div><!--news-top-->
-			<div class="cinema-content">
-				<div class="container">
-					<div class="promotions-content">
-						<h2>Kinoeröffnung</h2>
-						<div class="come-back cinema-come">
-							<p>Am 5. September eröffnet das Kino in der mall of Switzerland mit insgesamt 12 Sälen. <br />Die Säle sind ausgestattet mit modernster Technik.......</p>
-						</div>
-					</div>
-				</div><!--container-->
-				<div class="cinema-contact">
-					<h3>Contact Presse</h3>
-				</div><!--cinema-contact-->
-				<div class="cinema-hier">
-					<div class="container">
-						<h6>Hier die KOntaktdaten der Pressestelle angeben <br /> email usw.</h6>
-					</div><!--container-->
-				</div><!--cinema-hier-->
-			</div><!--news-content-->
+
+		<div class="main col-sm-12">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="top-login">
+						<ul>
+							<li>
+								<a href="#" title="Anmelden">Anmelden</a>
+							</li>
+							<li>
+								<a href="#" title="Passwort zurücksetzen">Passwort zurücksetzen</a>
+							</li>
+						</ul>
+					</div><!--top-login-->
+					<div class="form-login">
+						<form action="#" method="post">
+							<div class="form-group">
+							  	<label for="usr">Username or email address</label>
+							  	<input type="text" class="form-control" id="usr" name="Username or email address">
+							</div>
+							<p>Password reset instructions will be sent to your registered email address.</p>
+							<input type="submit" class="submit" value="Absenden" name="submit">
+						</form>
+					</div><!--form-login-->
+				</div>
+			</div><!--row-->
 		</div><!--main-->
-		<div class="footer shop-footer">
+
+		<div class="footer">
 			<div class="top-footer">
 				<div class="row top-footer-row">
 					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-align-center">
@@ -196,13 +194,14 @@
 				</div><!--row-->
 			</div><!--end-footer-->
 		</div>
+		<!---end footer -->
 	</div><!--wapper-->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/search.js"></script>
 	<script src="js/custom.js"></script>
 	<script src="js/slick.js"></script>
-	<script src="js/jquery.masonry.min.js"></script>
-	<script src="js/images.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+.wapper .main .where-background .nav-tabs .tab-button .icon-family {
+	background: url(../images/family.png);
+	background-repeat: no-repeat;
+	background-size: 1.875em 1.875em;
+}
+.wapper .main .where-background .nav-tabs .tab-button .icon-bag {
+	background: url(../images/bag.png);
+	background-repeat: no-repeat;
+	background-size: 1.875em 1.875em;
+}
+.wapper .main .where-background .nav-tabs .tab-button .icon-anima {
+	background: url(../images/anima.png);
+	background-repeat: no-repeat;
+	background-size: 1.875em 1.875em;
+}
+.wapper .main .where-background .nav-tabs .tab-button .icon-disabled {
+	background: url(../images/disabled.png);
+	background-repeat: no-repeat;
+	background-size: 1.875em 1.875em;
+}
+.wapper .main .where-background .tab-content .kids-zone {
+	font-family: fedraLight;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.94375em;
+    line-height: 2.02em;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+.wapper .main .where-background .tab-content .mb-3 p {
+	font-size: 1em;
+	line-height: 1.6em;
+	margin: 0;
+}
