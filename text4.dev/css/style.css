@@ -1,6 +1,6 @@
 @font-face {
     font-family: fedrabook;
-    src: url(../fonts/fedra-sans-book-59381675bcdda.otf);
+    src: url(../fonts/Fedra-Sans-Pro-Book_17238.ttf);
 }
 @font-face {
     font-family: fedrabold;
@@ -42,11 +42,11 @@ input:focus {
 	outline: none;
 	border: none;
 }
-button:focus {
+button:focus, button:active {
 	outline: 0 !important;
 	background-color: transparent !important;
 	box-shadow: none;
-	-webkit-box-shadow: none;
+	-webkit-box-shadow: none !important;
 }
 select, textarea,input {
 	box-shadow: none !important;
@@ -242,7 +242,7 @@ select, textarea,input {
 	transform: rotate(180deg);
 }
 .tools {
-	margin-left: 85%;
+	margin-left: 90%;
 	z-index: 15;
 	width: 100%;
     position: absolute;
@@ -280,13 +280,16 @@ select, textarea,input {
 	color: #000;
 	margin-right: 0.9375em;
 }
+.toolbar .language ul li a strong {
+	font-family: fedrabold;
+}
 .toolbar .language ul li:first-child a {
 	font-weight: 800;
 }
 .toolbar .search-toggler {
 	margin-left: 0.5em;
 	font-size: 1.25em;
-	margin-top: -0.7435em;
+	margin-top: -0.435em;
 	flex-grow: 0;
 	display: flex;
 	align-items: center;
@@ -429,9 +432,20 @@ select, textarea,input {
 .main .main-content .main-hour ul li {
 	width: 12%;
 	padding-top: 1.25em;
-	padding-bottom: 1.25em;
 	text-align: center;
 	width: 25%;
+}
+.main .main-content .main-hour ul li a {
+	display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    text-decoration: none;
+    width: 100%;
+    padding: .625em;
+    padding-bottom: 0;
+}
+.main .main-content .main-hour ul li a span {
+	margin: 0 auto 1em;
 }
 .main .main-content .main-hour ul li:last-child {
 	margin-right: 0;
@@ -449,7 +463,7 @@ select, textarea,input {
 	display: block;
 	color: #000;
 	font-size: 16px;
-	margin-top: 15px;
+	font-family: fedraLight;
 }
 .main-explore {
 	width: 100%;
@@ -459,8 +473,8 @@ select, textarea,input {
 	width: 100%;
 	float: left;
 	text-align: center;
-	margin-top: 60px;
-	margin-bottom: 100px;
+	margin-top: 3.5em;
+	margin-bottom: 4.375em;
 }
 .explore-mall svg {
 	width: 20px;
@@ -550,8 +564,6 @@ select, textarea,input {
   width: 40px; 
   height: 23.09px;
   background-color: #3f3f3f;
-  margin: 11.55px 0;
-  margin-top: 25px;
 }
 
 .main .main-content .main-hour .hexagon:before,
@@ -685,6 +697,10 @@ select, textarea,input {
 	border: none;
 	border-bottom: 1px solid #000;
 }
+.main .main-explore .main-form input[type="text"] {
+	font-family: fedraLight;
+	color: #000;
+}
 .main-form i {
 	color: #000;
 	position: absolute;
@@ -756,6 +772,12 @@ select, textarea,input {
 	float: left;
 	text-align: center;
 	margin-bottom: 60px;
+	background: linear-gradient(to bottom,rgba(198,198,198,.35) 0,#fff 100%);
+
+}
+.lively-bg {
+	background: transparent;
+	margin-bottom: 0;
 }
 .lively-place .place-lively  {
 	font-family: fedraLight;
@@ -771,6 +793,7 @@ select, textarea,input {
     margin-top: 4.375em;
     background-size: 65px;
     margin-bottom: 2.625em;
+    background-color: transparent;
 }
 .lively .hottest {
 	font-family: fedraLight;
@@ -911,7 +934,7 @@ select, textarea,input {
 .main .open-poisition .open-slider-content .see-all {
 	text-align: center;
 	left: 37%;
-	margin-top: -1em;
+	margin-top: -1.25em;
 	position: absolute;
 	z-index: 9;
 }
@@ -919,7 +942,7 @@ select, textarea,input {
 	background-color: #3f3f3f;
 	text-transform: uppercase;
 	display: inline-block;
-	padding: 0.7em 1.5em;
+	padding: 0.7em 1.25em;
 	color: #fff;
 	font-family: fedraMedium;
 }
@@ -928,22 +951,26 @@ select, textarea,input {
 	position: absolute;
 }
 .right-arrow {
-	left: -3em;
+	left: -3.2em;
+}
+.right-arrow, .left-arrow {
+	width: 2.2em;
 }
 .left-arrow {
-	right: -3em;
+	right: -3.2em;
 }
 .slick-arrow {
-	width: 1.9em !important;
     position: absolute;
     z-index: 1;    
 }
 .next {
-	right: 3.5%;
+	width: 1.9em; 
+	right: 19%;
     top: 50%;
 }
 .pre {
-	left: 14.5%;
+	width: 1.9em; 
+	left: 19%;
     top: 50%;
 }
 /* end main * /
@@ -954,7 +981,7 @@ select, textarea,input {
 .footer {
 	width: 100%;
 	float: left;
-	margin-top: 90px;
+	margin-top: 4em;
 }
 .footer .top-footer {
 	width: 100%;
@@ -1043,7 +1070,7 @@ select, textarea,input {
     padding: 1px 0px;
 
 }
-.footer .footer-search .webform-submit input[type='email'] {
+.footer .footer-search .webform-submit input::placeholder {
 	color: #c6c6c6;
 }
 .footer .footer-search .webform-submit input:invalid {
@@ -1115,4 +1142,8 @@ select, textarea,input {
 	line-height: 1.6em;
 	margin: 0;
 	text-align: center;
+ }
+.hexagon-footer {
+ 	margin: 0 !important;
+ 	margin-right: 0.375em !important;
  }

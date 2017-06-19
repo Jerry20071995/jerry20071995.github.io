@@ -16,38 +16,41 @@
  */
 /* global window, document, define, jQuery, setInterval, clearInterval */
 $(window).bind('scroll', function () {
-    if ($(window).scrollTop() > 150) {
+    if ($(window).scrollTop() > 0) {
         $('.header').addClass('fixed');
     } else {
         $('.header').removeClass('fixed');
     }
 });
+
 $(document).ready(function(){
   $('.single-item').slick({
         dots:true,
-        autoPlay: true,
-        autoplaySpeed: 2000,
+        autoplay:true,
+        autoplaySpeed: 1000,
   });
    $('.center').slick({
           centerMode: true,
-          centerPadding: '60px',
-          slidesToShow: 3,
+          centerPadding: '0px',
+          slidesToShow: 5,
+          autoplay:true,
+          autoplaySpeed: 1500,
           prevArrow: '<img src="images/left-white.png" class="pre" alt="pre" />',
             nextArrow: '<img src="images/right-white.png" class="next" alt="next" />',
           responsive: [
             {
               breakpoint: 768,
               settings: {
-                arrows: false,
+                arrows: true,
                 centerMode: true,
                 centerPadding: '40px',
-                slidesToShow: 1
+                slidesToShow: 3
               }
             },
             {
               breakpoint: 480,
               settings: {
-                arrows: false,
+                arrows: true,
                 centerMode: true,
                 centerPadding: '40px',
                 slidesToShow: 1,
@@ -63,10 +66,14 @@ $(document).ready(function(){
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 3,
+        autoplay:true,
+        autoplaySpeed: 1500,
         prevArrow: '<img src="images/left.png" class="right-arrow" alt="pre" />',
         nextArrow: '<img src="images/right.png" class="left-arrow" alt="next" />'
       });
 });
+
+
 (function(factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {

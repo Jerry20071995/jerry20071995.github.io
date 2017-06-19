@@ -27,8 +27,44 @@
     text-transform: uppercase;
     margin-bottom: 1em;
 }
+.wapper .main .where-background .tab-content .mb-3 {
+	margin-bottom: 1.75em;
+}
 .wapper .main .where-background .tab-content .mb-3 p {
 	font-size: 1em;
 	line-height: 1.6em;
 	margin: 0;
+}
+.wapper .main .where-background .view-map {
+	width: 100%;
+	float: left;
+	display: inline-flex;
+}
+.wapper .main .where-background .view-map .section-view {
+	margin: 1.5625em auto -1.375em;
+	padding-bottom: 4.375em;
+	margin-left: -15px;
+}
+.wapper .main .where-background .view-map .section-view .btn-danger {
+	display: inline-block;
+	padding: 0 20px 0 45px;
+	text-transform: uppercase;
+	height: 2.75em;
+	line-height: 2.75em;
+	font-family: fedraMedium;
+	color: #fff;
+	background: #3f3f3f;
+	position: relative;
+
+}
+.wapper .main .where-background .view-map .section-view .btn-danger i {
+	position: absolute;
+    z-index: 99;
+    color: #fff;
+    top: 12px;
+    left: 20px;
+}
+.wapper .main .where-background .view-map .section-view .btn-danger a {
+	color: #fff;
+	font-weight: 400;
 }

@@ -2,7 +2,8 @@
 	background: url(../images/7_swiss_shops_am_tag_vollbild.jpg);
 }
 .shop-search {
-	margin-top: 50px;
+	margin-top: 2.625em;
+	margin-bottom: 2.625em;
 	width: 100%;
 	float: left;
 }
@@ -32,6 +33,15 @@
 	padding-bottom: 10px;
 	padding-left: 0;
 }
+.shop-check {
+	text-align: center;
+	margin-top: 0.375em;
+	height: 2em;
+}
+.shop-gift {
+	text-align: center;
+	
+}
 .shop-gift i {
 	margin-left: 15px;
 	margin-right: 15px;
@@ -42,8 +52,7 @@
 	float: left;
 	background: #eeeeee;
 	padding-top: 50px;
-	margin-top: 50px;
-	padding-bottom: 80px;
+	padding-bottom: 2.625em;
 }
 .shop-item {
 	width: 100%;
