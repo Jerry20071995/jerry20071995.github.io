@@ -42,12 +42,7 @@ input:focus {
 	outline: none;
 	border: none;
 }
-button:focus, button:active {
-	outline: 0 !important;
-	background-color: transparent !important;
-	box-shadow: none;
-	-webkit-box-shadow: none !important;
-}
+
 select, textarea,input {
 	box-shadow: none !important;
 	-webkit-box-shadow: none !important;
@@ -661,9 +656,13 @@ select, textarea,input {
 	    color: transparent;
 	    transform: rotate(90deg);
      }
+     .main-slider .single-item  .slick-dots li.slick-active button:focus {
+     	outline: outset !important;
+     }
     .main-slider .single-item  .slick-dots li.slick-active button {
     	background-color: #fff;
     }
+    
      .main-slider .single-item .slick-dots li button:before, .main-slider .single-item .slick-dots li button:after {
 	    content: "";
 	    width: 0;
@@ -671,6 +670,12 @@ select, textarea,input {
 	    border-left: .375em solid transparent;
     	border-right: .375em solid transparent;
 	}
+	.main-slider .single-item  .slick-dots li.slick-active button:before {
+    	border-bottom: .21625em solid #fff;
+	}
+    .main-slider .single-item  .slick-dots li.slick-active button:after {
+    	border-top: .21625em solid #fff;
+    }
      .main-slider .single-item .slick-dots li button:before {
 	    bottom: 100%;
 	    left: 0;
@@ -1072,6 +1077,8 @@ select, textarea,input {
 }
 .footer .footer-search .webform-submit input::placeholder {
 	color: #c6c6c6;
+	font-weight: 400;
+	font-style: normal;
 }
 .footer .footer-search .webform-submit input:invalid {
 	box-shadow: none!important;

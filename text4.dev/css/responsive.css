@@ -478,3 +478,8 @@
 		width: 474px !important;
 	}
 }
+@media only screen and (max-width: 1600px) {
+	.tools {
+		margin-left: 85% !important;
+	}
+}
