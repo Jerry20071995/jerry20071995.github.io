@@ -1,4 +1,4 @@
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
 	#wapper #header .header-content .header-services h2 {
 		font-size: 29.96px !important;
 	}
