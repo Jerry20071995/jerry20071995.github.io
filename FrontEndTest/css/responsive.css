@@ -1,0 +1,35 @@
+@media only screen and (max-width: 480px) {
+	#wapper .main .top-main {
+		margin-top: 50px !important;
+	}
+	#wapper .title-bt a {
+		font-size: 19.99px !important;
+	}
+	#wapper .main .top-main .border-bt {
+		padding-bottom: 50px;
+		margin-bottom: 50px !important;
+	}
+	#wapper .main .top-main .top-main-content {
+		padding-right: 0;
+	}
+	#wapper .main .top-main .main-center .center-content {
+		padding-left: 12px !important;
+		padding-right: 12px !important;
+	}
+	#wapper .main .top-main .main-center .btn {
+		margin-top: 50px !important;
+		margin-bottom: 50px !important;
+	}
+	#wapper .main .end-main {
+		margin-top: 50px !important;
+		margin-bottom: 50px !important;
+	}
+	
+	#wapper .footer .footer-content .footer-item {
+		margin-top: 50px;
+		margin-bottom: 0 !important;
+	}
+	#wapper .footer .footer-content .item-lastchild {
+		margin-bottom: 50px !important;
+	}
+}
