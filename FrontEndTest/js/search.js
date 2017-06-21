@@ -1,4 +1,4 @@
-$( ".search-toggler i " ).click(function() {
+$( ".search-toggler .fa" ).click(function() {
   $( ".search_view" ).toggle( "swing", function() {
   });
 });

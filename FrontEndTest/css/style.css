@@ -119,9 +119,9 @@ a:hover, a:focus {
 	float: right;
 }
 #wapper #header .top-header .toolbar .search-toggler i {
-	font-size: 18px;
+	font-size: 16px;
     font-weight: 400;
-    margin-top: 5px;
+    margin-top: 4px;
 }
 /* === end top-header === */
 #wapper #header .header-content {
