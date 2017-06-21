@@ -182,6 +182,13 @@ a:hover, a:focus {
     border-color: #fff transparent;
 
 }
+.search_view .stylish-input-group i {
+	position: absolute;
+    color: #000;
+    z-index: 999;
+    right: 5%;
+    top: 25%;
+}
 /* === end header === */
 
 /* === main === */
