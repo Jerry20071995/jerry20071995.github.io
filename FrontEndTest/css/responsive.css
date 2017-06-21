@@ -1,9 +1,9 @@
 @media only screen and (max-width: 480px) {
-	#wapper .main .top-main {
-		margin-top: 50px !important;
+	#wapper #header .header-content .header-services h2 {
+		font-size: 29.96px !important;
 	}
-	#wapper .title-bt a {
-		font-size: 19.99px !important;
+	#wapper #header .header-content .header-services h6 {
+		font-size: 15.98px !important;
 	}
 	#wapper .main .top-main .border-bt {
 		padding-bottom: 50px;
@@ -24,7 +24,9 @@
 		margin-top: 50px !important;
 		margin-bottom: 50px !important;
 	}
-	
+	#wapper .main .end-main .technology-title {
+		margin-top: 50px !important;
+	}
 	#wapper .footer .footer-content .footer-item {
 		margin-top: 50px;
 		margin-bottom: 0 !important;

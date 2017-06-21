@@ -264,6 +264,17 @@ a:hover, a:focus {
 	font-family: proximanovalight;
 	font-size: 14px;
 	padding: 17px 25px;
+	position: relative;
+}
+#wapper .main .top-main .main-center .btn:before {
+	position: absolute;
+	content: "";
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid #ff7777;
+
 }
 #wapper .main .main-image {
 	width: 100%;
@@ -318,6 +329,9 @@ a:hover, a:focus {
 #wapper .footer .footer-content .footer-item {
 	margin-top: 100px;
 	margin-bottom: 45px;
+}
+#wapper .footer .footer-content .footer-item .top-main-content .footer-title {
+	width: 230px;
 }
 #wapper .footer .footer-content .footer-item .top-main-content .footer-title a {
 	color: #fff;
