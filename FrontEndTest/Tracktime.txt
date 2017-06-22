@@ -1,3 +1,0 @@
-Tracktime:
-Total: 12 tiếng 
-opacity cho header khó nên mất 2 tiếng.
