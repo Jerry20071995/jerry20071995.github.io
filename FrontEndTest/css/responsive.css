@@ -1,8 +1,8 @@
 @media only screen and (max-width: 767px) {
-	#wapper #header .header-content .header-services h2 {
+	#wapper #header .header-content h2 {
 		font-size: 29.96px !important;
 	}
-	#wapper #header .header-content .header-services h6 {
+	#wapper #header .header-content h6 {
 		font-size: 15.98px !important;
 	}
 	#wapper .main .top-main .border-bt {
@@ -28,11 +28,11 @@
 		margin-top: 50px !important;
 		padding-bottom: 20px !important;
 	}
-	#wapper .footer .footer-content .footer-item {
+	#wapper .footer .footer-item {
 		margin-top: 50px;
 		margin-bottom: 0 !important;
 	}
-	#wapper .footer .footer-content .item-lastchild {
+	#wapper .footer .item-lastchild {
 		margin-bottom: 50px !important;
 	}
 }

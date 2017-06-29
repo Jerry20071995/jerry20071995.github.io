@@ -6,10 +6,6 @@
     font-family: proximanovalight;
     src: url(../Fonts/proximanova-light-webfont.ttf);
 }
-@font-face {
-    font-family: fontawesome;
-    src: url(../Fonts/fontawesome-webfont.ttf);
-}
 body {
 	margin:0;
 	overflow-x:hidden;	
@@ -32,18 +28,6 @@ a:hover, a:focus {
 #wapper {
 	width: 100%;
 	float: left;
-}
-.header-open{
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-.header-open h6{
-    text-align: center;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    width: 264px;
-    margin: 40px auto !important;
 }
 #wapper #header {
 	width: 100%;
@@ -69,44 +53,22 @@ a:hover, a:focus {
 	float: left;
 	margin-top: 20px;
 	opacity: 1;
+	padding: 0 5px;
 }
-#wapper #header .top-header .logo {
-	margin-left: -10px;
-}
-#wapper #header .top-header .logo a h1 {
-	font-size: 40;
-	color: #e41919;
+#wapper #header .top-header .logo img {
 	display: inline-block;
-	margin: 0;
-}
-#wapper #header .top-header .logo a h1:after {
-	content: "";
-	border-right: 2px solid #fff;
-	margin-left: 2px;
-	margin-right: 1px;
-	opacity: 0.6;
-}
-#wapper #header .top-header .logo a h6 {
-	color: #fff;
-	display: inline-block;
-	font-size: 10px;
-	opacity: 0.6;
-
-}
-#wapper #header .top-header .logo a h6 span {
-	display: block;
 }
 #wapper #header .top-header .toolbar {
 	width: 100%;
 	float: left;
-	text-align: right;
 	color: #fff;
 	margin-top: 10px;
-	margin-left: 10px;
+}
+#wapper #header .top-header .toolbar .language {
+	display: inline-block;
 }
 #wapper #header .top-header .toolbar .language ul {
 	display: flex;
-	float: right;
 }
 #wapper #header .top-header .toolbar .language ul li {
 	margin-right: 20px;
@@ -115,36 +77,14 @@ a:hover, a:focus {
 	color: #fff;
 }
 #wapper #header .top-header .toolbar .search-toggler {
-	display: flex;
-	float: right;
+	display: inline-block;
 }
 #wapper #header .top-header .toolbar .search-toggler i {
 	font-size: 16px;
     font-weight: 400;
     margin-top: 4px;
 }
-/* === end top-header === */
-#wapper #header .header-content {
-	width: 100%;
-	float: left;
-	text-align: center;
-	color: #fff;
-	position: absolute;
-	top: 28.3%;
-}
-#wapper #header .header-content .header-services h2 {
-	font-size: 40px;
-	font-family: proximanovabold;
-	text-transform: uppercase;
-	letter-spacing: 10px;
-	margin: 0;
-}
-#wapper #header .header-content .header-services h6 {
-	font-size: 19.99px;
-	font-family: proximanovalight;
-	margin: 40px 0;
-}
-.search_view {
+#wapper #header .top-header .toolbar .search_view {
 	display: none;
     position: absolute;
     top: 46%;
@@ -152,24 +92,24 @@ a:hover, a:focus {
     width: 200px;
     right: -3%;
 }
-.nut_search i {
+#wapper #header .top-header .toolbar .nut_search i {
 	cursor: pointer;
 	position: relative;
 	z-index: 9999999999999;
 }
- .search_view #imaginary_container {
+#wapper #header .top-header .toolbar .search_view #imaginary_container {
     margin-top:20%; /* Don't copy this */
 }
-.search_view .stylish-input-group .input-group-addon {
+#wapper #header .top-header .toolbar .search_view .stylish-input-group .input-group-addon {
     background: white !important; 
 }
-.search_view .stylish-input-group .form-control {
+#wapper #header .top-header .toolbar .search_view .stylish-input-group .form-control {
 	border-right:0; 
 	box-shadow:0 0 0; 
 	border: 3px solid #fff;
     border-radius: 7px;
 }
-.search_view .stylish-input-group:before {
+#wapper #header .top-header .toolbar .search_view .stylish-input-group:before {
 	content: '';
     position: absolute;
     width: 0;
@@ -182,13 +122,40 @@ a:hover, a:focus {
     border-color: #fff transparent;
 
 }
-.search_view .stylish-input-group i {
+#wapper #header .top-header .toolbar .search_view .stylish-input-group i {
 	position: absolute;
     color: #000;
     z-index: 999;
     right: 5%;
     top: 25%;
 }
+/* === end top-header === */
+#wapper #header .header-content {
+	width: 100%;
+	float: left;
+	color: #fff;
+	position: absolute;
+	top: 28.3%;
+}
+#wapper #header .header-content h2 {
+	font-size: 40px;
+	font-family: proximanovabold;
+	letter-spacing: 10px;
+	margin: 0;
+}
+#wapper #header .header-content h6 {
+	font-size: 19.99px;
+	font-family: proximanovalight;
+	margin: 40px 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    width: 264px;
+    margin: 40px auto !important;
+}
+#wapper #header .header-content img {
+	display: inline-block;
+}
+
 /* === end header === */
 
 /* === main === */
@@ -243,7 +210,7 @@ a:hover, a:focus {
 	float: left;
 	margin-bottom: 100px;
 }
-#wapper .main .category .services {
+#wapper .main .category {
 	padding: 30px;
 	background: #f1f1f1;
 	border: 1px solid #dadada;
@@ -288,13 +255,9 @@ a:hover, a:focus {
 #wapper .main .top-main .main-center {
 	width: 100%;
 	float: left;
-	text-align: center;
 }
 #wapper .main .top-main .main-center .center-content {
-	padding-left: 200px;
-	padding-right: 200px;
-    margin: 0 auto;
-    text-align: center;
+	padding: 0 200px;
 }
 #wapper .main .top-main .main-center .center-content h6 {
 	margin: 0;
@@ -311,7 +274,6 @@ a:hover, a:focus {
 	color: #e41919;
 	background: #fff;
 	border-radius: 0;
-	text-transform: uppercase;
 	font-family: proximanovalight;
 	font-size: 14px;
 	padding: 17px 25px;
@@ -346,28 +308,28 @@ a:hover, a:focus {
 	margin-top: 100px;
 	margin-bottom: 100px;
 }
-#wapper .main .end-main .main-technology .technology-content .main-experience h5 {
+#wapper .main .end-main .main-technology .main-experience h5 {
 	font-family: proximanovabold;
 	font-size: 16px;
 	color: #999999;
 	margin: 25px 0;
 }
-#wapper .main .end-main .main-technology .technology-content .main-experience .experience-content ul li {
+#wapper .main .end-main .main-technology .main-experience ul li {
 	background: url(../images/background.jpg) left top no-repeat ;
 	padding-left: 16px;
 	background-position-y: 8px; 
 	margin: 25px 0;
 	
 }
-#wapper .main .end-main .main-technology .technology-content .main-experience .experience-content ul li:last-child {
+#wapper .main .end-main .main-technology .main-experience ul li:last-child {
 	margin-bottom: 0;
 }
-#wapper .main .end-main .main-technology .technology-content .main-experience .experience-content ul li span {
+#wapper .main .end-main .main-technology .main-experience ul li span {
 	font-family: proximanovalight;
 	font-size: 16px;
 	color: #999999;
 }
-.technology-title {
+#wapper .main .end-main .main-technology .technology-title {
 	padding-bottom: 40px !important;
 }
 /* end main === */
@@ -376,23 +338,19 @@ a:hover, a:focus {
 #wapper .footer {
 	width: 100%;
 	float: left;
-}
-#wapper .footer .footer-content {
-	width: 100%;
-	float: left;
 	background: #212121;
 }
-#wapper .footer .footer-content .footer-item {
+#wapper .footer .footer-item {
 	margin-top: 100px;
 	margin-bottom: 45px;
 }
-#wapper .footer .footer-content .footer-item .top-main-content .footer-title {
+#wapper .footer .footer-item .top-main-content .footer-title {
 	width: 230px;
 }
-#wapper .footer .footer-content .footer-item .top-main-content .footer-title a {
+#wapper .footer .footer-item .top-main-content .footer-title a {
 	color: #fff;
 }
-#wapper .footer .footer-content .footer-item .top-main-content .footer-open {
+#wapper .footer .footer-item .top-main-content .footer-open {
 	color: #999999;
 	margin-top: 40px;
 	margin-bottom: 0;

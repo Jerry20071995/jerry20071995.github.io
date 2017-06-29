@@ -36,7 +36,7 @@ $(document).ready(function(){
           autoplay:true,
           autoplaySpeed: 1500,
           prevArrow: '<img src="images/left-white.png" class="pre" alt="pre" />',
-            nextArrow: '<img src="images/right-white.png" class="next" alt="next" />',
+        nextArrow: '<img src="images/right-white.png" class="next" alt="next" />',
           responsive: [
             {
               breakpoint: 768,
