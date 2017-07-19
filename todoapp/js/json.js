@@ -4,46 +4,66 @@ $(document).ready(function() {
 	    	todo = $(this).val();
 	    	var total = 0;
 	    	if(todo != '') {
-		       	$('#show').append('<li id="show-data"><input type="checkbox" value=""  class="checkbox"><span>'+todo+'</span><i class="fa fa-times" aria-hidden="true"></i></li>');
+		       	$('#show').append('<li class="show-data"><input type="checkbox" value=""  class="checkbox"><span>'+todo+'</span><i class="fa fa-times" aria-hidden="true"></i></li>');
 		       	$('#new-todo').val(null);
 		       	var checkbox = $('.checkbox');
 	       		$('.checkbox').click(function() {
 	       			for(var i = 0 ; i<= checkbox.length; i++) {
 		       			if($(this).is(":checked") ) {
-		       				$('#show-data').addClass('completed');
+		       				$(this).parent().addClass('all-completed');
 		       				$(this).parent().css({"text-decoration": "line-through","opacity":"0.5"});
 		       			}else {
-		       				$('#show-data').removeClass('completed');
-		       				$(this).parent().css({"text-decoration": "none"});
+		       				$(this).parent().removeClass('all-completed');
+		       				$(this).parent().css({"text-decoration": "none","opacity":"1"});
 		       			};
 	       			};
 	       		});
-	       		var number = function() {
-					total = $('input[type=checkbox]:not(checked)').length;
-		       	};
-		       	$('.checkbox').one('click', function() {
-		       		$('.footer-last').append('<button id="clear-all">Clear Complete </button>');
-		       	})
-	       		$('#active').click(function() {
-       				$('#show-data').parent().find('input[type=checkbox]:not(checked)').parent().show();
-	       			$('#show-data').parent().find('input[type=checkbox]:checked').parent().hide();
-	       		});
-	       		$('#completed').click(function() {
-	       			$('#show-data').parent().find('input[type=checkbox]:not(checked)').parent().hide();
-	       			$('#show-data').parent().find('input[type=checkbox]:checked').parent().show();
-	       		});
-	       		$('#all').click(function() {
-	       			$('#show-data').show();
-	       		});
-   				$('#clear-all').click(function() {
-       				$('.completed').remove();
+
+
+
+	       		$('.checkbox').one('click', function() {
+                   if ($('.footer-last button').length === 0) {
+                       $('.footer-last').append('<button id="clear-all">Clear Completed </button>');
+                   };
+                });
+
+	       		$('button').click(function() {
+       				$('.all-completed').remove();
        			});
+
+	       		$('#active').click(function() {
+       				$('.show-data').parent().find('input[type=checkbox]:not(checked)').parent().show();
+	       			$('.show-data').parent().find('input[type=checkbox]:checked').parent().hide();
+	       		});
+
+
+
+	       		$('#completed').click(function() {
+	       			$('.show-data').parent().find('input[type=checkbox]:not(checked)').parent().hide();
+	       			$('.show-data').parent().find('input[type=checkbox]:checked').parent().show();
+	       		});
+
+
+	       		$('#all').click(function() {
+	       			$('.show-data').show();
+	       		});
+
+
+   				
+
+
 	       		$('.fa-times').click(function() {
 	       			for(var i = 0; i<= $('.fa-times').length; i++) {
 	       				$(this).parent().remove();
 	       			};
-	       		});	
-	       		$('.number-todo').append(number(total));	
+	       		});
+	       		
+	       		var countChecked = function() {
+				  var n = $( "input[type=checkbox]:not(checked)" ).length;
+				  $( ".number-todo" ).append(n);
+				};
+				countChecked();
+				$( "input[type=checkbox]" ).one( "click", countChecked );	
 		    };
 	    }; 
 	});
