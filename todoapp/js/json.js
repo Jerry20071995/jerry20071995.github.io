@@ -57,13 +57,6 @@ $(document).ready(function() {
 	       				$(this).parent().remove();
 	       			};
 	       		});
-	       		
-	       		var countChecked = function() {
-				  var n = $( "input[type=checkbox]:not(checked)" ).length;
-				  $( ".number-todo" ).append(n);
-				};
-				countChecked();
-				$( "input[type=checkbox]" ).one( "click", countChecked );	
 		    };
 	    }; 
 	});
