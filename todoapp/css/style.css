@@ -63,11 +63,11 @@ input[placeholder] {
 	text-align: left;
 	border-bottom: 1px solid #4d4d4d;
 }
-#show-data .checkbox {
+.show-data .checkbox {
 	display: inline;
 	margin-right: 10px !important;
 }
-#show-data .fa-times {
+.show-data .fa-times {
 	float: right;
     font-size: 20px;
     font-weight: 200;
