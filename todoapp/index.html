@@ -14,32 +14,22 @@
         <div class="row">
           <div class="col-sm-6">
             <h3>TODOS</h3>
-            <div class="input-group" *ngIf="tasklist.is_write">
-              <input type="text" class="form-control new-todo" placeholder="Type in a new todo..." [(ngModel)]="newtodo"
-                     name="newTodo">
+            <div class="input-group">
+              <input type="text" class="form-control new-todo" placeholder="Type in a new todo..." name="newTodo">
               <span class="input-group-btn">
-              <button class="btn btn-default submit"
-              type="submit" [disabled]="newtodo===''"
-              (click)="addTodo(newtodo); newtodo=''">Add Todo </button>
+              <button class="btn btn-default submit" type="submit" >Add Todo </button>
               </span>
             </div>
-
-            <div [hidden]="newtodo">
-            </div>
-
-            <div [hidden]="!newtodo">
-            </div>
-            <br>
             <div>
-              <div *ngFor="let todo of todos"  >
-                <div *ngIf="!todo.done" style="margin: 1.5%" class="todo-active">
+              <div>
+                <div style="margin: 1.5%" class="todo-active">
                   <span>&nbsp;</span>
                 </div>
               </div>
             </div>
             <br>
             <div>
-              <button (click)="doneAllTodos()" class="btn btn-primary btn-sm" [disabled]="!tasklist.is_write">Mark all
+              <button class="btn btn-primary btn-sm">Mark all
                 as Done
               </button>
             </div>
@@ -48,17 +38,15 @@
           <div class="col-sm-6">
             <h3>DONE</h3>
             <div>
-              <div *ngFor="let todo of todos">
-                <div *ngIf="todo.done" style="margin: 1.5%"  class="todo-done">
+              <div>
+                <div style="margin: 1.5%"  class="todo-done">
                   <span>&nbsp;</span>
                 </div>
               </div>
             </div>
             <br>
             <div>
-              <button (click)="deleteAllDones()" class="btn btn-danger btn-sm" [disabled]="!tasklist.is_write">Delete
-                all Done
-              </button>
+              <button class="btn btn-danger btn-sm">Deleteall Done</button>
             </div>
 
           </div><!-- /.col-lg-6 -->
