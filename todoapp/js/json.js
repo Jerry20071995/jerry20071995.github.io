@@ -1,67 +1,117 @@
-$(document).ready(function() {
-	$("#new-todo").on("keydown",function search(event) {
-	    if(event.keyCode == 13) {
-	    	todo = $(this).val();
-	    	var total = 0;
-	    	if(todo != '') {
-		       	$('#show').append('<li class="show-data"><input type="checkbox" value=""  class="checkbox"><span>'+todo+'</span><i class="fa fa-times" aria-hidden="true"></i></li>');
-		       	$('#new-todo').val(null);
-		       	var checkbox = $('.checkbox');
-	       		$('.checkbox').click(function() {
-	       			for(var i = 0 ; i<= checkbox.length; i++) {
-		       			if($(this).is(":checked") ) {
-		       				$(this).parent().addClass('all-completed');
-		       				$(this).parent().css({"text-decoration": "line-through","opacity":"0.5"});
-		       			}else {
-		       				$(this).parent().removeClass('all-completed');
-		       				$(this).parent().css({"text-decoration": "none","opacity":"1"});
-		       			};
-	       			};
-	       		});
+$(document).ready(function () {
+  var data = [];
+  var todo = '';
+
+  getTodo(function(){
+    render();
+  });
+  	
+  	$('.input-group button').attr('disabled', true);
+	  $('.input-group input').keyup(function() {
+	      var empty = true;
+	      $('.input-group input').each(function() {
+	          if ($(this).val().length !== 0) {
+	              empty = false;
+	          }
+	      });
+	      if (empty) {
+	          $('.input-group button').attr('disabled', 'disabled');
+	      } else {
+	          $('.input-group button').attr('disabled', false);
+	      }
+	  });
 
 
+	  $('.submit').click(function () {
+	    todo = $('.new-todo').val();
+	    $('.new-todo').val(null);
+	    createTodo(todo);
+	  });
+	  
 
-	       		$('.checkbox').one('click', function() {
-                   if ($('.footer-last button').length === 0) {
-                       $('.footer-last').append('<button id="clear-all">Clear Completed </button>');
-                   };
-                });
+	    $('.done').click(function() {
+	  		var done = $(this).prent().val();
+	  		alert(done);
+	  });
+	  function render() {
+	    console.log(data);
+	    for (var i in data) {
+	      if (data[i].done == true) {
+	        $('.todo-done').append('<li class="mt5"  attr.index=' + data[i].id + '><button class="btn btn-warning btn-xs done">Delete</button>&nbsp;&nbsp;' + data[i].name + '</li>');
+	      } else {
+	        $('.todo-active').append('<li class="mt5" attr.index=' + data[i].id + '><button class="btn btn-info btn-xs done" >Done</button>&nbsp;&nbsp;' + data[i].name + '</li>');
+	      }
+	    }
+	  }
 
-	       		$('button').click(function() {
-       				$('.all-completed').remove();
-       			});
+	  function getTodo(callback) {
+	     $.ajax({
+	      url: 'https://angular-task-list.herokuapp.com/task_lists/100/todos',
+	      type: 'GET',
+	      dataType: 'json',
+	      success: function (responsed_data) {
+	        data = responsed_data;
+	        console.log(JSON.stringify(data));
+	        callback();
+	      },
+	      error: function () {
+	        alert('boo!');
+	      },
+	      beforeSend: setHeader
+	    });
 
-	       		$('#active').click(function() {
-       				$('.show-data').parent().find('input[type=checkbox]:not(checked)').parent().show();
-	       			$('.show-data').parent().find('input[type=checkbox]:checked').parent().hide();
-	       		});
+	     function setHeader(xhr) {
+	      xhr.setRequestHeader('Content-Type', 'application/json');
+	      xhr.setRequestHeader('Uid', 'abc@gmail.com');
+	      xhr.setRequestHeader('Access-Token', 'mcrMPvs1S31GWFxTBUEBkg');
+	      xhr.setRequestHeader('Client', 'xtBmzMWmXCD2kh2o1HtQNg');
+	    } 
+	  }
 
 
+	  function createTodo(name) {
+	     $.ajax({
+	      type: 'POST',
+	      url: 'https://angular-task-list.herokuapp.com/task_lists/100/todos',
+	      data: JSON.stringify({"name": name}),
+	      dataType: "json",
+	      success: function (responsed_data) {
+	        data.push(responsed_data);
+	      },
+	      error: function (error) {
+	        alert(JSON.stringify(error));
+	      },
+	      beforeSend: setHeader
+	    });
 
-	       		$('#completed').click(function() {
-	       			$('.show-data').parent().find('input[type=checkbox]:not(checked)').parent().hide();
-	       			$('.show-data').parent().find('input[type=checkbox]:checked').parent().show();
-	       		});
+	    function setHeader(xhr) {
+	      xhr.setRequestHeader('Content-Type', 'application/json');
+	      xhr.setRequestHeader('Uid', 'abc@gmail.com');
+	      xhr.setRequestHeader('Access-Token', 'mcrMPvs1S31GWFxTBUEBkg');
+	      xhr.setRequestHeader('Client', 'xtBmzMWmXCD2kh2o1HtQNg');
+	    }
+	  }
 
+		  function doneTodo(done) {
+		     $.ajax({
+		      type: 'GET',
+		      url: 'https://angular-task-list.herokuapp.com/task_lists/100/todos',
+		      data: JSON.stringify({done}),
+		      dataType: "json",
+		      success: function (done) {
+		        alert(done);
+		      },
+		      error: function (error) {
+		        alert(JSON.stringify(error));
+		      },
+		      beforeSend: setHeader
+		    });
 
-	       		$('#all').click(function() {
-	       			$('.show-data').show();
-	       		});
-
-
-   				
-
-
-	       		$('.fa-times').click(function() {
-	       			for(var i = 0; i<= $('.fa-times').length; i++) {
-	       				$(this).parent().remove();
-	       			};
-	       		});
-	       		
-	       	
-		    };
-	    }; 
-	});
-
+		    function setHeader(xhr) {
+		      xhr.setRequestHeader('Content-Type', 'application/json');
+		      xhr.setRequestHeader('Uid', 'abc@gmail.com');
+		      xhr.setRequestHeader('Access-Token', 'mcrMPvs1S31GWFxTBUEBkg');
+		      xhr.setRequestHeader('Client', 'xtBmzMWmXCD2kh2o1HtQNg');
+		    }
+		  }
 });
-

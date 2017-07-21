@@ -1,5 +1,5 @@
 {
-  "items": [
+  "todo": [
     {
       "key": "First",
       "value": 100
@@ -15,5 +15,4 @@
     "number": 1.2345e-6,
     "enabled": true
   },
-  "message": "Strings have to be in double-quotes."
 }

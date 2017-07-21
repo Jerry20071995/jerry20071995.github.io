@@ -21,6 +21,9 @@ a:hover {text-decoration: none;}
 ul {
 	padding: 0;
 }
+.mt5 {
+	margin-top: 5px;
+}
 #search_advance {
 	display: none;
 }

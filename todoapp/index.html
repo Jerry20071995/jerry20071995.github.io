@@ -9,34 +9,63 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="wapper">
-		<div class="header">
-			<h1>todos</h1>
-			<form action="#" id="todo-form">
-				<i class="fa fa-angle-down" aria-hidden="true"></i>
-				<input type="text" id="new-todo" placeholder="What needs to be done?">
-			</form>
-	    	
-	    </div><!--header-->
-	    <div class="main">
-	    	<ul id="show"></ul>
-	    </div><!--main-->
-	    <div class="footer">
-	    	<div class="footer-item">
-	    		<span><b class="number-todo"></b> items left</span>
-	    	</div>
-	    	<div class="footer-item footer-list">
-		    	<ul class="list">
-		    		<li><a href="#" class="hover" id="all">All</a></li>
-		    		<li><a href="#" class="hover" id="active">Active</a></li>
-		    		<li><a href="#" class="hover" id="completed">Completed</a></li>
-		    	</ul>
-	    	</div>
-	    	<div class="footer-item footer-last">
-	    		
-	    	</div>
-	    </div><!--footer-->
-	</div><!--wapper-->
+	
+<div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>TODOS</h3>
+            <div class="input-group" *ngIf="tasklist.is_write">
+              <input type="text" class="form-control new-todo" placeholder="Type in a new todo..." [(ngModel)]="newtodo"
+                     name="newTodo">
+              <span class="input-group-btn">
+              <button class="btn btn-default submit"
+              type="submit" [disabled]="newtodo===''"
+              (click)="addTodo(newtodo); newtodo=''">Add Todo </button>
+              </span>
+            </div>
+
+            <div [hidden]="newtodo">
+            </div>
+
+            <div [hidden]="!newtodo">
+            </div>
+            <br>
+            <div>
+              <div *ngFor="let todo of todos"  >
+                <div *ngIf="!todo.done" style="margin: 1.5%" class="todo-active">
+                  <span>&nbsp;</span>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div>
+              <button (click)="doneAllTodos()" class="btn btn-primary btn-sm" [disabled]="!tasklist.is_write">Mark all
+                as Done
+              </button>
+            </div>
+          </div><!-- /.col-lg-6 -->
+          <!--<hr class="hidden-sm-up">-->
+          <div class="col-sm-6">
+            <h3>DONE</h3>
+            <div>
+              <div *ngFor="let todo of todos">
+                <div *ngIf="todo.done" style="margin: 1.5%"  class="todo-done">
+                  <span>&nbsp;</span>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div>
+              <button (click)="deleteAllDones()" class="btn btn-danger btn-sm" [disabled]="!tasklist.is_write">Delete
+                all Done
+              </button>
+            </div>
+
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+</div>
+
+
 	<script src="js/core/jquery.min.js"></script>
 	<script src="js/core/bootstrap.min.js"></script>
 	<script src="js/json.js"></script>

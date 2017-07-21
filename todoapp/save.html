@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TODOS</title>
+	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"/>
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wapper">
+		<div class="header">
+			<h1>todos</h1>
+			<form action="#" id="todo-form">
+				<i class="fa fa-angle-down" aria-hidden="true"></i>
+				<input type="text" id="new-todo" placeholder="What needs to be done?">
+			</form>
+	    	
+	    </div><!--header-->
+	    <div class="main">
+	    	<ul id="show"></ul>
+	    </div><!--main-->
+	    <div class="footer">
+	    	<div class="footer-item">
+	    		<span><b class="number-todo"></b> items left</span>
+	    	</div>
+	    	<div class="footer-item footer-list">
+		    	<ul class="list">
+		    		<li><a href="#" class="hover" id="all">All</a></li>
+		    		<li><a href="#" class="hover" id="active">Active</a></li>
+		    		<li><a href="#" class="hover" id="completed">Completed</a></li>
+		    	</ul>
+	    	</div>
+	    	<div class="footer-item footer-last">
+	    		
+	    	</div>
+	    </div><!--footer-->
+	</div><!--wapper-->
+
+	
+	<script src="js/core/jquery.min.js"></script>
+	<script src="js/core/bootstrap.min.js"></script>
+	<script src="js/json.js"></script>
+</body>
+
+</html>
