@@ -7,30 +7,37 @@ $(document).ready(function () {
       renderAction();
       renderDeleteAction(); 
       checkCompletedLenght();
-      checkActiveLenght();
     });
   });
 
-  function setHeader(xhr) {
+  function setHeader( xhr ) {
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader('Uid', 'abc@gmail.com');
     xhr.setRequestHeader('Access-Token', 'mcrMPvs1S31GWFxTBUEBkg');
     xhr.setRequestHeader('Client', 'xtBmzMWmXCD2kh2o1HtQNg');
   } 
-  $('#new-todo').on('keyup', function(e) {
+
+  function count() {
+
+  }
+
+  $( '#new-todo' ).on( 'keyup', function( e ) {
     var keyCode = e.keyCode || e.which;
     if (keyCode === 13) { 
       e.preventDefault();
+      $('.fa-ul').css(
+        "display", "block"
+      );
       todo = $('#new-todo').val();
       createTodo(todo);
       $('#new-todo').val(null);
     }
   });
   
-  $('#all').click(function() {
-    $('#completed-content').css("display", "none");
-    $('#active-content').css("display", "none");
-    $('#all-content').css("display", "block");
+  $( '#all' ).click(function() {
+    $( '#completed-content' ).css( "display", "none" );
+    $( '#active-content' ).css( "display", "none" );
+    $( '#all-content' ).css( "display", "block" );    
   });
 
   $('#active').click(function() {
@@ -49,12 +56,9 @@ $(document).ready(function () {
   function checkCompletedLenght() {
     if ($("#completed-content li").length < 1) {
       $('#clear-completed').css("display", "none");
-    } else {$('#clear-completed').css("display", "block");}
-  }
-
-  function checkActiveLenght() {
-    item = $("#active-content li").length;
-    $('.number-todo').append(item);
+    } else {
+      $('#clear-completed').css("display", "block");
+    }
   }
 
   function renderDeleteAction() {
@@ -130,6 +134,9 @@ $(document).ready(function () {
         '"><input type="checkbox" value="" id="done' + responsed_data.id + '"></label>' + responsed_data.name +
         '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-times delete" aria-hidden="true" id="delete' + responsed_data.id+'"></i></li>')
         ;
+        $('.fa-ul').css(
+          "display", "none"
+        );
         renderAction();
         renderDeleteAction();
       },
@@ -190,24 +197,6 @@ $(document).ready(function () {
       },
       error: function (error) {
         alert(JSON.stringify(error));
-      },
-      beforeSend: setHeader
-    });
-  }
-
-
-  function deleteAllTodoCompleted( done, todoID ) {
-     $.ajax({
-      type: 'DELETE',
-      url: 'https://angular-task-list.herokuapp.com/task_lists/100/todos/' + todoID,
-      data: JSON.stringify({"done": true}),
-      dataType: "json",
-      success: function ( responsed_data ) {
-        console.log('delete success' + todoID)
-        $('#li'+todoID).remove();
-      },
-      error: function (error) {
-        console.log(JSON.stringify(error));
       },
       beforeSend: setHeader
     });
