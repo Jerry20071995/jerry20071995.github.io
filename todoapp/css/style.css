@@ -71,10 +71,23 @@ input[placeholder] {
 	padding: 15px 60px 15px 15px;
 	text-align: left;
 	border-bottom: 1px solid #4d4d4d;
+	position: relative;
+}
+.show-data .check {
+	width: 20px;
+	height: 20px;
+	border: 1px solid #ccc;
+	border-radius: 100%;
+	position: absolute;
+	background: transparent;
+	z-index: 0;
+	top: 35%;
+	left: 1.5%;
 }
 .show-data .checkbox {
 	display: inline;
-	margin-right: 10px !important;
+	margin-right: 30px;
+
 }
 .show-data .fa-times {
 	float: right;

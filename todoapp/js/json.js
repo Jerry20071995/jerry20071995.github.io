@@ -3,11 +3,7 @@ $(document).ready(function () {
   var item = 0;
 
   getTodo(function(){
-    render(function(){
-      renderAction();
-      renderDeleteAction(); 
-      checkCompletedLenght();
-    });
+    render('init');
   });
 
   function setHeader( xhr ) {
@@ -17,8 +13,8 @@ $(document).ready(function () {
     xhr.setRequestHeader('Client', 'xtBmzMWmXCD2kh2o1HtQNg');
   } 
 
-  function count() {
-
+  function notify( message, style ) {
+    $.notify(message, style);
   }
 
   $( '#new-todo' ).on( 'keyup', function( e ) {
@@ -37,16 +33,16 @@ $(document).ready(function () {
   $( '#all' ).click(function() {
     $( '#completed-content' ).css( "display", "none" );
     $( '#active-content' ).css( "display", "none" );
-    $( '#all-content' ).css( "display", "block" );    
+    $( '#all-content' ).css( "display", "block" ); 
   });
 
-  $('#active').click(function() {
+  $( '#active' ).click(function() {
     $('#all-content').css("display", "none");
     $('#completed-content').css("display", "none");
     $('#active-content').css("display", "block");
   });
 
-  $('#completed').click(function() {
+  $( '#completed' ).click(function() {
     $('#all-content').css("display", "none");
     $('#active-content').css("display", "none");
     $('#completed-content').css("display", "block");
@@ -58,8 +54,15 @@ $(document).ready(function () {
       $('#clear-completed').css("display", "none");
     } else {
       $('#clear-completed').css("display", "block");
-    }
-  }
+    };
+  };
+
+
+  function count() {
+    item = $('li').length;
+    $('.number-todo').append(item);
+  };
+
 
   function renderDeleteAction() {
     $('.delete').click(function() {
@@ -82,27 +85,79 @@ $(document).ready(function () {
   }; 
 
 
-  function render(callback) {
-    for (var i in data) {
-      let checked = data[i].done ? 'checked' : '';
-      let style = data[i].done ? 'style="display: visible"' : 'style="display: hidden"';
-      $('#all-content').append('<li class="mt5 show-data"  id="li'+data[i].id+
-      '"><input type="checkbox" class="done" value="" '+checked+' id="done'+data[i].id+'"></label>' +data[i].name+
-      '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-times delete"  aria-hidden="true" id="done'+data[i].id+'"></i></li>');
-      
-      if (data[i].done) {
-      $('#completed-content').append('<li class="mt5 show-data" id="li'+data[i].id+
-        '"><input type="checkbox" value="" checked  id="done'+data[i].id+'"></label>' +data[i].name+
-        '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-times delete"  aria-hidden="true" id="done'+data[i].id+'"></i></li>');
-      }
-      else {
-        $('#active-content').append('<li class="mt5 show-data" id="li'+data[i].id+
-        '"><input type="checkbox" value="" id="done'+data[i].id+'"></label>' +data[i].name+
-        '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-times delete" aria-hidden="true" id="done'+data[i].id+'"></i></li>');
-      }
+  function render(action, responsed_data) {
+    if (action === 'init') {
+      for (var i in data) {
+        let checked = data[i].done ? 'checked' : '';
+        let style = data[i].done ? 'style="display: visible"' : 'style="display: hidden"';
+        $('#all-content').append('<li class="mt5 show-data"  id="li'+data[i].id+
+        '"><input type="checkbox"  class="done checkbox" '+checked+' id="done'+data[i].id+'"></label>' +data[i].name+
+        '<i class="fa fa-times delete"  aria-hidden="true" id="done'+data[i].id+'"></i></li>');
+        
+        if (data[i].done) {
+        $('#completed-content').append('<li class="mt5 show-data" id="completed'+data[i].id+
+          '"><input type="checkbox" class="checkbox" checked  id="done'+data[i].id+'"></label>' +data[i].name+
+          '<i class="fa fa-times delete"  aria-hidden="true" id="done'+data[i].id+'"></i></li>');
+        }
+        else {
+          $('#active-content').append('<li class="mt5 show-data" id="acitve'+data[i].id+
+          '"><input type="checkbox" class="checkbox" id="done'+data[i].id+'"></label>' +data[i].name+
+          '<i class="fa fa-times delete" aria-hidden="true" id="done'+data[i].id+'"></i></li>');
+        };
+      };
     }
-    callback();
-  }
+
+    if (action === 'create') {
+     $('#all-content li:first-child').before('<li class="mt5 show-data" id="li'+ responsed_data.id +
+      '"><input type="checkbox" class="checkbox" id="done' + responsed_data.id + '"></label>' + responsed_data.name +
+      '<i class="fa fa-times delete" aria-hidden="true" id="delete' + responsed_data.id+'"></i></li>')
+      ; 
+      $('#active-content li:first-child').before('<li class="mt5 show-data" id="li'+ responsed_data.id +
+      '"><input type="checkbox" class="checkbox" id="done' + responsed_data.id + '"></label>' + responsed_data.name +
+      '<i class="fa fa-times delete" aria-hidden="true" id="delete' + responsed_data.id+'"></i></li>')
+      ;
+      $('#completed-content li:first-child').before('<li class="mt5 show-data" id="li'+ responsed_data.id +
+      '"><input type="checkbox" checked class="checkbox" id="done' + responsed_data.id + '"></label>' + responsed_data.name +
+      '<i class="fa fa-times delete" aria-hidden="true" id="delete' + responsed_data.id+'"></i></li>')
+      ;
+      $('.fa-ul').css(
+        "display", "none"
+      );
+    }
+    
+    if (action === 'done') {
+      $('#all-content li:first-child').before('<li class="mt5 show-data" id="li'+ responsed_data.id +
+      '"><input type="checkbox" checked class="checkbox" id="done' + responsed_data.id + '"></label>' + responsed_data.name +
+      '<i class="fa fa-times delete" aria-hidden="true" id="delete' + responsed_data.id+'"></i></li>')
+      ;
+      $('#active-content li:first-child').before('<li class="mt5 show-data" id="li'+ responsed_data.id +
+      '"><input type="checkbox" class="checkbox" id="done' + responsed_data.id + '"></label>' + responsed_data.name +
+      '<i class="fa fa-times delete" aria-hidden="true" id="delete' + responsed_data.id+'"></i></li>')
+      ; 
+      $('#completed-content li:first-child').before('<li class="mt5 show-data" id="li'+ responsed_data.id +
+      '"><input type="checkbox" checked class="checkbox" id="done' + responsed_data.id + '"></label>' + responsed_data.name +
+      '<i class="fa fa-times delete" aria-hidden="true" id="delete' + responsed_data.id+'"></i></li>')
+      ;
+    }
+    if (action === 'delete') {
+      $('#all-content li:first-child').before('<li class="mt5 show-data" id="li'+ responsed_data.id +
+      '"><input type="checkbox" checked class="checkbox" id="done' + responsed_data.id + '"></label>' + responsed_data.name +
+      ';<i class="fa fa-times delete" aria-hidden="true" id="delete' + responsed_data.id+'"></i></li>')
+      ; 
+      $('#completed-content li:first-child').before('<li class="mt5 show-data" id="li'+ responsed_data.id +
+      '"><input type="checkbox" checked class="checkbox" id="done' + responsed_data.id + '"></label>' + responsed_data.name +
+      ';<i class="fa fa-times delete" aria-hidden="true" id="delete' + responsed_data.id+'"></i></li>')
+      ;
+      $('#active-content li:first-child').before('<li class="mt5 show-data" id="li'+ responsed_data.id +
+      '"><input type="checkbox" class="checkbox" id="done' + responsed_data.id + '"></label>' + responsed_data.name +
+      '<i class="fa fa-times delete" aria-hidden="true" id="delete' + responsed_data.id+'"></i></li>')
+      ;
+    }
+    
+    renderAction();
+    renderDeleteAction(); 
+    checkCompletedLenght();
+  };
 
 
   function getTodo(callback) {
@@ -119,7 +174,7 @@ $(document).ready(function () {
       },
       beforeSend: setHeader
     });
-  }
+  };
 
 
   function createTodo( name ) {
@@ -130,22 +185,29 @@ $(document).ready(function () {
       dataType: "json",
       success: function ( responsed_data ) {
         data.push(responsed_data);
-        $('#all-content li:first-child').before('<li class="mt5 show-data" id="li'+ responsed_data.id +
-        '"><input type="checkbox" value="" id="done' + responsed_data.id + '"></label>' + responsed_data.name +
-        '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-times delete" aria-hidden="true" id="delete' + responsed_data.id+'"></i></li>')
-        ;
-        $('.fa-ul').css(
-          "display", "none"
-        );
+        // $('#all-content li:first-child').before('<li class="mt5 show-data" id="li'+ responsed_data.id +
+        // '"><input type="checkbox" class="checkbox" id="done' + responsed_data.id + '"></label>' + responsed_data.name +
+        // '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-times delete" aria-hidden="true" id="delete' + responsed_data.id+'"></i></li>')
+        // ; 
+        // $('#active-content li:first-child').before('<li class="mt5 show-data" id="li'+ responsed_data.id +
+        // '"><input type="checkbox" class="checkbox" id="done' + responsed_data.id + '"></label>' + responsed_data.name +
+        // '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-times delete" aria-hidden="true" id="delete' + responsed_data.id+'"></i></li>')
+        // ;
+        // $('.fa-ul').css(
+        //   "display", "none"
+        // );
+        render('create', responsed_data);    
+        notify("createTodo success","success");
         renderAction();
         renderDeleteAction();
       },
       error: function (error) {
         alert(JSON.stringify(error));
+        notify("createTodo error","error");
       },
       beforeSend: setHeader
     });
-  }
+  };
 
 
   function doneTodo( todoID ) {
@@ -156,7 +218,7 @@ $(document).ready(function () {
       dataType: "json",
       success: function ( responsed_data ) {
         console.log('done success'+todoID);
-        $('#li' + todoID + 'input').is('checked');
+        render('done', responsed_data);
         renderDeleteAction();
       },
       error: function (error) {
@@ -164,7 +226,7 @@ $(document).ready(function () {
       },
       beforeSend: setHeader
     });
-  }
+  };
 
 
   function activeTodo( todoID ) {
@@ -176,6 +238,7 @@ $(document).ready(function () {
       success: function ( responsed_data ) {
         console.log('active success'+todoID);
         $('#li' + todoID + 'input').not(':checked');
+        render('done', responsed_data);
         renderDeleteAction();
       },
       error: function (error) {
@@ -183,7 +246,7 @@ $(document).ready(function () {
       },
       beforeSend: setHeader
     });
-  }
+  };
 
 
   function deleteTodo( todoID ) {
@@ -194,13 +257,15 @@ $(document).ready(function () {
       success: function ( responsed_data ) {
         console.log('delete success'+todoID)
         $('#li'+todoID).remove();
+        notify("deleteTodo success", "success");
+        render('delete', responsed_data);
       },
       error: function (error) {
-        alert(JSON.stringify(error));
+        notify("deleteTodo error", "error");
       },
       beforeSend: setHeader
     });
-  }
+  };
 
   
 });
