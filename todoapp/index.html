@@ -9,54 +9,39 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	
-<div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <h3>TODOS</h3>
-            <div class="input-group">
-              <input type="text" class="form-control new-todo" placeholder="Type in a new todo..." name="newTodo">
-              <span class="input-group-btn">
-              <button class="btn btn-default submit" type="submit" >Add Todo </button>
-              </span>
-            </div>
-            <div>
-              <div>
-                <div style="margin: 1.5%" class="todo-active">
-                  <span>&nbsp;</span>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div>
-              <button class="btn btn-primary btn-sm">Mark all
-                as Done
-              </button>
-            </div>
-          </div><!-- /.col-lg-6 -->
-          <!--<hr class="hidden-sm-up">-->
-          <div class="col-sm-6">
-            <h3>DONE</h3>
-            <div>
-              <div>
-                <div style="margin: 1.5%"  class="todo-done">
-                  <span>&nbsp;</span>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div>
-              <button class="btn btn-danger btn-sm">Deleteall Done</button>
-            </div>
-
-          </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-</div>
-
-
-	<script src="js/core/jquery.min.js"></script>
-	<script src="js/core/bootstrap.min.js"></script>
+	<div class="wapper">
+		<div class="header">
+			<h1>todos</h1>
+			<form action="#" id="todo-form">
+				<i class="fa fa-angle-down" aria-hidden="true"></i>
+				<input type="text" id="new-todo" placeholder="What needs to be done?">
+			</form>
+	    </div><!--header-->
+	    <div class="main">
+	    	<ul id="all-content" style="display: visible"></ul>
+	    	<ul id="active-content" style="display: none"></ul>
+	    	<ul id="completed-content" style="display: none"></ul>
+	    </div><!--main-->
+	    <div class="footer">
+	    	<div class="footer-item">
+	    		<span><b class="number-todo"></b> items left</span>
+	    	</div>
+	    	<div class="footer-item footer-list">
+		    	<ul class="list">
+		    		<li><a href="#" class="hover" id="all">All</a></li>
+		    		<li><a href="#" class="hover" id="active">Active</a></li>
+		    		<li><a href="#" class="hover" id="completed">Completed</a></li>
+		    	</ul>
+	    	</div>
+	    	<div class="footer-item footer-last">
+	    		<li id="clear-completed"><a href="#" class="hover" >Clear completed</a></li>
+	    	</div>
+	    </div><!--footer-->
+	</div><!--wapper-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script src="js/json.js"></script>
+	<script src="js/notify.min.js"></script>
 </body>
 
 </html>

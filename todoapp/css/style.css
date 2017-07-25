@@ -20,9 +20,7 @@ a {text-decoration: none;}
 a:hover {text-decoration: none;}
 ul {
 	padding: 0;
-}
-.mt5 {
-	margin-top: 5px;
+	margin: 0;
 }
 #search_advance {
 	display: none;
@@ -75,6 +73,9 @@ input[placeholder] {
     font-size: 20px;
     font-weight: 200;
     padding-top: 5px;
+}
+.delete {
+	margin-right: 10px;
 }
 .footer {
 	width: 40%;
