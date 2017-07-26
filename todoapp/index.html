@@ -11,30 +11,54 @@
 <body>
 	<div class="wapper">
 		<div class="header">
-			<h1>todos</h1>
-			<form action="#" id="todo-form">
-				<i class="fa fa-angle-down" aria-hidden="true"></i>
-				<input type="text" id="new-todo" placeholder="What needs to be done?">
-				<ul class="fa-ul">
-					<li><i class="fa-li fa fa-spinner fa-spin"></i></li>
-				</ul>
-			</form>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-md-offset-3 col-lg-offset-3">
+						<h1>todos</h1>
+						<form action="#" id="todo-form" class="form-group">
+							<i class="fa fa-angle-down" aria-hidden="true"></i>
+							<input type="text" id="new-todo" class="form-control" placeholder="What needs to be done?">
+							<ul class="fa-ul">
+								<li><i class="fa-li fa fa-spinner fa-spin"></i></li>
+							</ul>
+						</form>
+					</div>
+				</div>
+			</div>
 	    </div><!--header-->
 	    <div class="main">
-	    	<ul id="all-content" style="display: visible"></ul>
-	    	<ul id="active-content" style="display: none"></ul>
-	    	<ul id="completed-content" style="display: none"></ul>
+	    	<div class="container">
+	    		<div class="row">
+	    			<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-md-offset-3 col-lg-offset-3">
+	    				<ul id="all-content" style="display: visible"></ul>
+				    	<ul id="active-content" style="display: none"></ul>
+				    	<ul id="completed-content" style="display: none"></ul>
+	    			</div>
+	    		</div>
+	    	</div>
 	    </div><!--main-->
 	    <div class="footer">
-	    	<div class="footer-item footer-list">
-		    	<ul class="list">
-		    		<li><a href="#" class="hover" id="all">All</a></li>
-		    		<li><a href="#" class="hover" id="active">Active</a></li>
-		    		<li><a href="#" class="hover" id="completed">Completed</a></li>
-		    	</ul>
-	    	</div>
-	    	<div class="footer-item footer-last">
-	    		<li id="clear-completed"><a href="#" class="hover" >Clear completed</a></li>
+	    	<div class="container">
+	    		<div class="row">
+	    			<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-md-offset-3 col-lg-offset-3">
+	    				<div class="row">
+	    					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	    						<div class="footer-item footer-list">
+							    	<ul class="list">
+							    		<li><a href="#" class="hover" id="all">All</a></li>
+							    		<li><a href="#" class="hover" id="active">Active</a></li>
+							    		<li><a href="#" class="hover" id="completed">Completed</a></li>
+							    	</ul>
+						    	</div>
+	    					</div>
+	    					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	    						<div class="footer-item footer-last">
+						    		<li id="clear-completed"><a href="#" class="hover" >Clear completed</a></li>
+						    	</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
 	    	</div>
 	    </div><!--footer-->
 	</div><!--wapper-->
