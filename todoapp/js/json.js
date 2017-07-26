@@ -1,6 +1,7 @@
 $(document).ready(function () {
   var data = [];
   var item = 0;
+  var styleOpacity = '';
 
   getTodo();
 
@@ -108,18 +109,19 @@ $(document).ready(function () {
       for (var i = data.length - 1; i > -1; i--) {
         let checked = data[i].done ? 'checked' : '';
         let style = data[i].done ? 'style="display: visible"' : 'style="display: hidden"';
+        let styleOpacity = $('.checkbox').is('checked') ? 'style="opacity: 0.6;text-decoration: line-through"' : 'style="opacity: 1"';
 
-        $('#all-content').append('<li class="mt5 show-data"  id="li'+data[i].id +
+        $('#all-content').append('<li class="mt5 show-data" '+styleOpacity+'  id="li'+data[i].id +
           '"><input type="checkbox"  class="update checkbox" '+checked+' id="done'+data[i].id+'">'+data[i].name +
           '<i class="fa fa-times delete"  aria-hidden="true" id="done'+data[i].id+'"></i></li>');
 
         if (data[i].done) {
-          $('#completed-content').append('<li class="mt5 show-data" id="completed'+data[i].id +
+          $('#completed-content').append('<li class="mt5 show-data" '+styleOpacity+' id="completed'+data[i].id +
             '"><input type="checkbox" class=" checkbox comletedUpdate" checked  id="doneCompleted'+data[i].id+'">'+data[i].name +
             '<i class="fa fa-times delete"  aria-hidden="true" id="done'+data[i].id+'"></i></li>');
         }
         else {
-          $('#active-content').append('<li class="mt5 show-data" id="acitve'+data[i].id +
+          $('#active-content').append('<li class="mt5 show-data" id="active'+data[i].id +
             '"><input type="checkbox" class=" checkbox activeUpdate " id="doneActive'+data[i].id+'">'+data[i].name +
             '<i class="fa fa-times delete" aria-hidden="true" id="done'+data[i].id+'"></i></li>');
         };
@@ -127,16 +129,16 @@ $(document).ready(function () {
     }
 
     if ( action === 'create' ) {
-      $('#all-content li:first-child').before('<li class="mt5 show-data" id="li'+renderData.id +
+      $('#all-content li:first-child').before('<li '+styleOpacity+' class="mt5 show-data" id="li'+renderData.id +
         '"><input type="checkbox" class="update checkbox" id="done'+renderData.id+'">'+renderData.name +
         '<i class="fa fa-times delete" aria-hidden="true" id="delete'+renderData.id+'"></i></li>')
       ;
-      $('#active-content li:first-child').before('<li class="mt5 show-data" id="acitve'+renderData.id +
+      $('#active-content li:first-child').before('<li class="mt5 show-data" id="active'+renderData.id +
         '"><input type="checkbox" class="checkbox activeUpdate " id="doneActive'+renderData.id+'">'+renderData.name +
         '<i class="fa fa-times delete" aria-hidden="true" id="delete'+renderData.id+'"></i></li>')
       ;
       if ( action === 'create' && renderData.done === true ) {
-        $('#completed-content li:first-child').before('<li class="mt5 show-data" style="opacity: 0.6" id="acitve'+renderData.id +
+        $('#completed-content li:first-child').before('<li class="mt5 show-data" '+styleOpacity+' style="opacity: 0.6" id="acitve'+renderData.id +
           '"><input type="checkbox" checked  class="checkbox comletedUpdate " id="doneCompleted'+renderData.id+'">'+renderData.name +
           '<i class="fa fa-times delete" aria-hidden="true" id="delete'+renderData.id+'"></i></li>')
         ;
@@ -150,7 +152,7 @@ $(document).ready(function () {
     if ( action === 'update' && renderData.done === true ) {
       $('#done'+renderData.id).attr("checked", true);
       $('#active'+renderData.id).remove();
-      $('#completed-content').append('<li class="mt5 show-data"  id="completed'+renderData.id +
+      $('#completed-content').append('<li class="mt5 show-data" '+styleOpacity+' id="completed'+renderData.id +
             '"><input type="checkbox" class="checkbox comletedUpdate" checked  id="doneCompleted'+renderData.id+'">'+renderData.name +
             '<i class="fa fa-times delete"  aria-hidden="true" id="done'+renderData.id+'"></i></li>');
     }
@@ -188,10 +190,11 @@ $(document).ready(function () {
       success: function (responsed_data) {
         data = responsed_data;
         console.log('get todos success');
+        notify('getTodo success','success');
         render('init');
       },
       error: function () {
-        alert('error');
+        notify('getTodo error','error');
       },
       beforeSend: setHeader
     });
@@ -210,7 +213,6 @@ $(document).ready(function () {
         notify("createTodo success", "success");
       },
       error: function (error) {
-        alert(JSON.stringify(error));
         notify("createTodo error", "error");
       },
       beforeSend: setHeader
@@ -229,9 +231,10 @@ $(document).ready(function () {
         data.filter(h => h.id === todoID)[0].done = checked;
         console.log('update success todo No. '+todoID+' to '+checked);
         render('update', responsed_data);
+        notify("updateTodo success", "success");
       },
       error: function (error) {
-        alert(JSON.stringify(error));
+        notify("updateTodo ", "error");
       },
       beforeSend: setHeader
     });
@@ -245,7 +248,6 @@ $(document).ready(function () {
       success: function (responsed_data) {
         notify("deleteTodo success", "success");
         console.log('delete success todo No. '+todoID);
-
         deleteData = data.filter(h => h.id === todoID)[0];
         data = data.filter(h => h.id !== todoID);
 
