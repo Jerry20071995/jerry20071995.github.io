@@ -18,13 +18,15 @@ $(document).ready(function () {
   $('#new-todo').on('keyup', function (e) {
     var keyCode = e.keyCode || e.which;
     if (keyCode === 13) {
-      e.preventDefault();
-      $('.fa-ul').css(
-        "display", "block"
-      );
-      todo = $('#new-todo').val();
-      createTodo(todo);
-      $('#new-todo').val(null);
+      if ($(this).val() != '') {
+        e.preventDefault();
+        $('.fa-ul').css(
+          "display", "block"
+        );
+        todo = $('#new-todo').val();
+        createTodo(todo);
+        $('#new-todo').val(null);
+      }
     }
   });
 
@@ -57,12 +59,6 @@ $(document).ready(function () {
   };
 
 
-  // function count() {
-  //   item = $('li').length;
-  //   $('.number-todo').append(item);
-  // };
-
-
   function renderDeleteAction() {
     $('.delete').click(function () {
       deleteTodo(parseInt($(this).attr('id').match(/\d+/), 10));
@@ -79,8 +75,9 @@ $(document).ready(function () {
 
 
   function render(action, renderData) {
+
     if (action === 'init') {
-      for (var i in data) {
+      for (var i = data.length - 1; i > -1; i--) {
         let checked = data[i].done ? 'checked' : '';
         let style = data[i].done ? 'style="display: visible"' : 'style="display: hidden"';
 

@@ -94,6 +94,11 @@ input[placeholder] {
     font-size: 20px;
     font-weight: 200;
     padding-top: 5px;
+    cursor:pointer
+}
+.fa-hand-paper-o {
+	float: right;
+	position: absolute;
 }
 .delete {
 	margin-right: 10px;
@@ -133,4 +138,7 @@ input[placeholder] {
 }
 .footer-list ul li:last-child {
 	margin-right: 0;
+}
+.footer-last  li a {
+	color: #4d4d4d;
 }
