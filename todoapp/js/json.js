@@ -73,6 +73,22 @@ $(document).ready(function () {
     });
   };
 
+ function renderActive() {
+    $(".activeUpdate").each(function (index) {
+      $('#'+$(this).attr('id')).click(function () {
+        updateTodo(parseInt($(this).attr('id').match(/\d+/), 10)); 
+      });
+    });
+  };
+
+function renderCompleted() {
+    $(".comletedUpdate").each(function (index) {
+      $('#'+$(this).attr('id')).click(function () {
+        updateTodo(parseInt($(this).attr('id').match(/\d+/), 10)); 
+      });
+    });
+  };
+
 
   function render(action, renderData) {
 
@@ -87,12 +103,12 @@ $(document).ready(function () {
 
         if (data[i].done) {
           $('#completed-content').append('<li class="mt5 show-data" id="completed'+data[i].id +
-            '"><input type="checkbox" class="checkbox" checked  id="done'+data[i].id+'">'+data[i].name +
+            '"><input type="checkbox" class="comletedUpdate checkbox" checked  id="doneCompleted'+data[i].id+'">'+data[i].name +
             '<i class="fa fa-times delete"  aria-hidden="true" id="done'+data[i].id+'"></i></li>');
         }
         else {
           $('#active-content').append('<li class="mt5 show-data" id="acitve'+data[i].id +
-            '"><input type="checkbox" class="checkbox" id="done'+data[i].id+'">'+data[i].name +
+            '"><input type="checkbox" class="activeUpdate checkbox" id="doneActive'+data[i].id+'">'+data[i].name +
             '<i class="fa fa-times delete" aria-hidden="true" id="done'+data[i].id+'"></i></li>');
         };
       };
@@ -120,7 +136,7 @@ $(document).ready(function () {
 
 
     if (action === 'update' && renderData.done === true) {
-      $('#li'+renderData.id+'input').is(':checked');
+      $('#done'+renderData.id).attr("checked", true);
       $('#acitve'+renderData.id).remove();
       $('#completed-content').append('<li class="mt5 show-data" id="completed'+renderData.id +
             '"><input type="checkbox" class="checkbox" checked  id="done'+renderData.id+'">'+renderData.name +
@@ -129,9 +145,9 @@ $(document).ready(function () {
 
 
     if (action === 'update' && renderData.done === false) {
-      $('#li'+renderData.id+'input').not(':checked');
+      $('#done'+renderData.id).attr("checked", false);
       $('#completed'+renderData.id).remove();
-      $('#active-content').append('<li class="mt5 show-data" id="acitve'+renderData.id +
+      $('#active-content').append('<li class="mt5 show-data" id="active'+renderData.id +
             '"><input type="checkbox" class="checkbox" id="done'+renderData.id+'">'+renderData.name +
             '<i class="fa fa-times delete" aria-hidden="true" id="done'+renderData.id+'"></i></li>');
     }
@@ -147,6 +163,8 @@ $(document).ready(function () {
     renderAction();
     renderDeleteAction();
     checkCompletedLenght();
+    renderActive();
+    renderCompleted();
   };
 
 
@@ -196,7 +214,6 @@ $(document).ready(function () {
       data: JSON.stringify({"done": checked}),
       dataType: "json",
       success: function (responsed_data) {
-        console.log(responsed_data);
         data.filter(h => h.id === todoID)[0].done = checked;
         console.log('update success todo No. '+todoID+' to '+checked);
         render('update', responsed_data);
