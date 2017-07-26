@@ -149,7 +149,7 @@ $(document).ready(function () {
 
     if ( action === 'update' && renderData.done === true ) {
       $('#done'+renderData.id).attr("checked", true);
-      $('#acitve'+renderData.id).remove();
+      $('#active'+renderData.id).remove();
       $('#completed-content').append('<li class="mt5 show-data"  id="completed'+renderData.id +
             '"><input type="checkbox" class="checkbox comletedUpdate" checked  id="doneCompleted'+renderData.id+'">'+renderData.name +
             '<i class="fa fa-times delete"  aria-hidden="true" id="done'+renderData.id+'"></i></li>');
