@@ -30,11 +30,13 @@ $(document).ready(function () {
     }
   });
 
+
   $('#all').click(function () {
     $('#completed-content').css("display", "none");
     $('#active-content').css("display", "none");
     $('#all-content').css("display", "block");
   });
+
 
   $('#active').click(function () {
     $('#all-content').css("display", "none");
@@ -42,10 +44,20 @@ $(document).ready(function () {
     $('#active-content').css("display", "block");
   });
 
+
   $('#completed').click(function () {
     $('#all-content').css("display", "none");
     $('#active-content').css("display", "none");
     $('#completed-content').css("display", "block");
+  });
+
+
+  $('#clear-completed').click(function() {
+    for (var i in data) {
+      if (data[i].done === true) {
+        deleteTodo(data[i].id);
+      }
+    }
   });
 
 
@@ -81,7 +93,7 @@ $(document).ready(function () {
     });
   };
 
-function renderCompleted() {
+  function renderCompleted() {
     $(".comletedUpdate").each(function (index) {
       $('#'+$(this).attr('id')).click(function () {
         updateTodo(parseInt($(this).attr('id').match(/\d+/), 10)); 
@@ -90,9 +102,9 @@ function renderCompleted() {
   };
 
 
-  function render(action, renderData) {
+  function render( action, renderData ) {
 
-    if (action === 'init') {
+    if ( action === 'init' ) {
       for (var i = data.length - 1; i > -1; i--) {
         let checked = data[i].done ? 'checked' : '';
         let style = data[i].done ? 'style="display: visible"' : 'style="display: hidden"';
@@ -103,7 +115,7 @@ function renderCompleted() {
 
         if (data[i].done) {
           $('#completed-content').append('<li class="mt5 show-data" id="completed'+data[i].id +
-            '"><input type="checkbox" class=" checkbox  comletedUpdate" checked  id="doneCompleted'+data[i].id+'">'+data[i].name +
+            '"><input type="checkbox" class=" checkbox comletedUpdate" checked  id="doneCompleted'+data[i].id+'">'+data[i].name +
             '<i class="fa fa-times delete"  aria-hidden="true" id="done'+data[i].id+'"></i></li>');
         }
         else {
@@ -114,18 +126,18 @@ function renderCompleted() {
       };
     }
 
-    if (action === 'create') {
+    if ( action === 'create' ) {
       $('#all-content li:first-child').before('<li class="mt5 show-data" id="li'+renderData.id +
         '"><input type="checkbox" class="update checkbox" id="done'+renderData.id+'">'+renderData.name +
         '<i class="fa fa-times delete" aria-hidden="true" id="delete'+renderData.id+'"></i></li>')
       ;
       $('#active-content li:first-child').before('<li class="mt5 show-data" id="acitve'+renderData.id +
-        '"><input type="checkbox" class="checkbox   activeUpdate" id="doneActive'+renderData.id+'">'+renderData.name +
+        '"><input type="checkbox" class="checkbox activeUpdate " id="doneActive'+renderData.id+'">'+renderData.name +
         '<i class="fa fa-times delete" aria-hidden="true" id="delete'+renderData.id+'"></i></li>')
       ;
-      if (action === 'create' && renderData.done === true) {
-        $('#completed-content li:first-child').before('<li class="mt5 show-data" id="acitve'+renderData.id +
-          '"><input type="checkbox" checked  class="checkbox  comletedUpdate " id="doneCompleted'+renderData.id+'">'+renderData.name +
+      if ( action === 'create' && renderData.done === true ) {
+        $('#completed-content li:first-child').before('<li class="mt5 show-data" style="opacity: 0.6" id="acitve'+renderData.id +
+          '"><input type="checkbox" checked  class="checkbox comletedUpdate " id="doneCompleted'+renderData.id+'">'+renderData.name +
           '<i class="fa fa-times delete" aria-hidden="true" id="delete'+renderData.id+'"></i></li>')
         ;
       }
@@ -135,11 +147,11 @@ function renderCompleted() {
     }
 
 
-    if (action === 'update' && renderData.done === true) {
+    if ( action === 'update' && renderData.done === true ) {
       $('#done'+renderData.id).attr("checked", true);
       $('#acitve'+renderData.id).remove();
-      $('#completed-content').append('<li class="mt5 show-data" id="completed'+renderData.id +
-            '"><input type="checkbox" class="checkbox comletedUpdate " checked  id="doneCompleted'+renderData.id+'">'+renderData.name +
+      $('#completed-content').append('<li class="mt5 show-data"  id="completed'+renderData.id +
+            '"><input type="checkbox" class="checkbox comletedUpdate" checked  id="doneCompleted'+renderData.id+'">'+renderData.name +
             '<i class="fa fa-times delete"  aria-hidden="true" id="done'+renderData.id+'"></i></li>');
     }
 
@@ -148,7 +160,7 @@ function renderCompleted() {
       $('#done'+renderData.id).attr("checked", false);
       $('#completed'+renderData.id).remove();
       $('#active-content').append('<li class="mt5 show-data" id="active'+renderData.id +
-            '"><input type="checkbox" class="checkbox activeUpdate " id="doneActive'+renderData.id+'">'+renderData.name +
+            '"><input type="checkbox" class="checkbox activeUpdate" id="doneActive'+renderData.id+'">'+renderData.name +
             '<i class="fa fa-times delete" aria-hidden="true" id="done'+renderData.id+'"></i></li>');
     }
     if (action === 'delete') {
