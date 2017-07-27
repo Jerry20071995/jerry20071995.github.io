@@ -4,7 +4,6 @@ $(document).ready(function () {
   var styleOpacity = '';
 
   getTodo();
-
   function setHeader(xhr) {
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader('Uid', 'abc@gmail.com');
@@ -62,8 +61,22 @@ $(document).ready(function () {
     }
   });
 
+  function checkUpdate() {
+    $('li').find('.checkbox').each(function() {
+      if ($(this).prop('checked')==true) {
+        $(this).parent().css({
+          opacity: '0.7',
+          'text-decoration': 'line-through',
+        });
+      }else {
+        $(this).parent().css({
+          opacity: '1',
+          'text-decoration': 'none',
+        });
+      }
+    })
+  }
 
-  
 
 
   $('.hover').on('click', function() {
@@ -72,23 +85,6 @@ $(document).ready(function () {
         // add active class to clicked element
         $(this).addClass('active');
     });
-
-  function checkUpdate() {
-    $(document).on('click', 'li input:checkbox', function() {
-          var answer = $(this).closest('li').next('.answer');
-          if(this.checked){
-              $(this).parent().css({
-                'text-decoration': 'line-through',
-                'opacity': '0.6'
-              });
-          } else {
-              $(this).parent().css({
-              'text-decoration': 'none',
-              'opacity': '1'
-            });
-          }
-      });
-  }
 
 
 
@@ -139,13 +135,13 @@ $(document).ready(function () {
       for (var i = data.length - 1; i > -1; i--) {
         let checked = data[i].done ? 'checked' : '';
         let style = data[i].done ? 'style="display: visible"' : 'style="display: hidden"';
-        let styleOpacity = data[i].done ? 'style="opacity: 0.6;text-decoration:line-through"' : 'style="opacity: 1"';
+        let styleOpacity = data[i].done ? 'style="opacity: 0.6;text-decoration:line-through"' : 'style="opacity: 1;text-decoration:none"';
         $('#all-content').append('<li class="mt5 show-data" id="li'+data[i].id +
           '"><input type="checkbox"  class="update checkbox" '+checked+' id="done'+data[i].id+'">'+data[i].name +
           '<i class="fa fa-times delete"  aria-hidden="true" id="done'+data[i].id+'"></i></li>');
 
         if (data[i].done) {
-          $('#completed-content').append('<li class="mt5 show-data"  id="completed'+data[i].id +
+          $('#completed-content').append('<li class="mt5 show-data" id="completed'+data[i].id +
             '"><input type="checkbox" class=" checkbox comletedUpdate" checked  id="doneCompleted'+data[i].id+'">'+data[i].name +
             '<i class="fa fa-times delete"  aria-hidden="true" id="done'+data[i].id+'"></i></li>');
         }
@@ -167,7 +163,7 @@ $(document).ready(function () {
         '<i class="fa fa-times delete" aria-hidden="true" id="delete'+renderData.id+'"></i></li>')
       ;
       if ( action === 'create' && renderData.done === true ) {
-        $('#completed-content li:first-child').before('<li class="mt5 show-data"   style="opacity: 0.6" id="acitve'+renderData.id +
+        $('#completed-content li:first-child').before('<li class="mt5 show-data" style="opacity: 0.6" id="acitve'+renderData.id +
           '"><input type="checkbox" checked  class="checkbox comletedUpdate " id="doneCompleted'+renderData.id+'">'+renderData.name +
           '<i class="fa fa-times delete" aria-hidden="true" id="delete'+renderData.id+'"></i></li>')
         ;
@@ -181,7 +177,7 @@ $(document).ready(function () {
     if ( action === 'update' && renderData.done === true ) {
       $('#done' + renderData.id).attr("checked", true);
       $('#active' + renderData.id).remove();
-      $('#completed-content').append('<li class="mt5 show-data"  id="completed'+renderData.id +
+      $('#completed-content').append('<li class="mt5 show-data" id="completed'+renderData.id +
             '"><input type="checkbox" class="checkbox comletedUpdate" checked  id="doneCompleted'+renderData.id+'">'+renderData.name +
             '<i class="fa fa-times delete"  aria-hidden="true" id="done'+renderData.id+'"></i></li>');
     }
@@ -208,6 +204,7 @@ $(document).ready(function () {
     checkCompletedLenght();
     renderActive();
     renderCompleted();
+    checkUpdate();
   };
 
 
