@@ -61,6 +61,27 @@ $(document).ready(function () {
     }
   });
 
+  $('li .checkbox').click(function() {
+    if ($('.checkbox').is('checked')) {
+      $(this).css({
+        'text-decoration': 'line-through',
+        'opacity': '0.6'
+      });
+    }else {
+      $(this).css({
+        'text-decoration': 'none',
+        'opacity': '1'
+      });
+    }
+  });
+
+  $('.hover').bind('click', function() {
+        // remove the active class from all elements with active class
+        $('.active').removeClass('active')
+        // add active class to clicked element
+        $(this).addClass('active');
+    });
+
 
   function checkCompletedLenght() {
     if ($("#completed-content li").length < 1) {
@@ -149,8 +170,8 @@ $(document).ready(function () {
 
 
     if ( action === 'update' && renderData.done === true ) {
-      $('#done'+renderData.id).attr("checked", true);
-      $('#active'+renderData.id).remove();
+      $('#done' + renderData.id).attr("checked", true);
+      $('#active' + renderData.id).remove();
       $('#completed-content').append('<li class="mt5 show-data"  id="completed'+renderData.id +
             '"><input type="checkbox" class="checkbox comletedUpdate" checked  id="doneCompleted'+renderData.id+'">'+renderData.name +
             '<i class="fa fa-times delete"  aria-hidden="true" id="done'+renderData.id+'"></i></li>');
@@ -158,8 +179,8 @@ $(document).ready(function () {
 
 
     if (action === 'update' && renderData.done === false) {
-      $('#done'+renderData.id).attr("checked", false);
-      $('#completed'+renderData.id).remove();
+      $('#done' + renderData.id).attr("checked", false);
+      $('#completed' + renderData.id).remove();
       $('#active-content').append('<li class="mt5 show-data" id="active'+renderData.id +
             '"><input type="checkbox" class="checkbox activeUpdate" id="doneActive'+renderData.id+'">'+renderData.name +
             '<i class="fa fa-times delete" aria-hidden="true" id="done'+renderData.id+'"></i></li>');
@@ -189,11 +210,11 @@ $(document).ready(function () {
       success: function (responsed_data) {
         data = responsed_data;
         console.log('get todos success');
-        notify('getTodo success','success');
+        notify('get data success','success');
         render('init');
       },
       error: function () {
-        notify('getTodo error','error');
+        notify('get data error','error');
       },
       beforeSend: setHeader
     });
@@ -209,10 +230,10 @@ $(document).ready(function () {
       success: function (responsed_data) {
         data.push(responsed_data);
         render('create', responsed_data);
-        notify("createTodo success", "success");
+        notify("create Todo success", "success");
       },
       error: function (error) {
-        notify("createTodo error", "error");
+        notify("create Todo error", "error");
       },
       beforeSend: setHeader
     });
@@ -230,10 +251,10 @@ $(document).ready(function () {
         data.filter(h => h.id === todoID)[0].done = checked;
         console.log('update success todo No. '+todoID+' to '+checked);
         render('update', responsed_data);
-        notify("updateTodo success", "success");
+        notify("update Todo success", "success");
       },
       error: function (error) {
-        notify("updateTodo ", "error");
+        notify("update Todo ", "error");
       },
       beforeSend: setHeader
     });
@@ -245,15 +266,14 @@ $(document).ready(function () {
       url: 'https://angular-task-list.herokuapp.com/task_lists/100/todos/'+todoID,
       dataType: "json",
       success: function (responsed_data) {
-        notify("deleteTodo success", "success");
+        notify("delete Todo success", "success");
         console.log('delete success todo No. '+todoID);
         deleteData = data.filter(h => h.id === todoID)[0];
         data = data.filter(h => h.id !== todoID);
-
         render('delete', deleteData);
       },
       error: function (error) {
-        notify("deleteTodo error", "error");
+        notify("delete Todo error", "error");
       },
       beforeSend: setHeader
     });

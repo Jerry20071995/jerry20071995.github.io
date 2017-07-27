@@ -71,7 +71,7 @@ input[placeholder] {
 	margin: 0 auto;
 	background: #fff;
 	font-size: 24px;
-	padding: 15px 60px 15px 15px;
+	padding: 15px 15px 15px 15px;
 	text-align: left;
 	border-bottom: 1px solid #4d4d4d;
 	position: relative;
@@ -128,7 +128,12 @@ input[placeholder] {
 	display: flex;
 }
 
-.footer-list ul li:hover, .footer-list ul li a:focus  {
+.footer-list ul li a:hover, .footer-list ul li a:focus  {
+	border-color: rgba(175, 47, 47, 0.2);
+	border: 1px solid #ff7777;
+	border-radius: 3px;
+}
+.active {
 	border-color: rgba(175, 47, 47, 0.2);
 	border: 1px solid #ff7777;
 	border-radius: 3px;
@@ -142,4 +147,8 @@ input[placeholder] {
 }
 .footer-last  li a {
 	color: #4d4d4d;
+	padding: 3px 7px;
+}
+.footer-last  li a:hover {
+	text-decoration: underline;
 }
