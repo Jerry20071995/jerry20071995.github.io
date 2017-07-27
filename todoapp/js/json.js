@@ -16,6 +16,7 @@ $(document).ready(function () {
     $.notify(message, style);
   }
 
+
   $('#new-todo').on('keyup', function (e) {
     var keyCode = e.keyCode || e.which;
     if (keyCode === 13) {
@@ -61,26 +62,34 @@ $(document).ready(function () {
     }
   });
 
-  $('li .checkbox').click(function() {
-    if ($('.checkbox').is('checked')) {
-      $(this).css({
-        'text-decoration': 'line-through',
-        'opacity': '0.6'
-      });
-    }else {
-      $(this).css({
-        'text-decoration': 'none',
-        'opacity': '1'
-      });
-    }
-  });
 
-  $('.hover').bind('click', function() {
+  
+
+
+  $('.hover').on('click', function() {
         // remove the active class from all elements with active class
         $('.active').removeClass('active')
         // add active class to clicked element
         $(this).addClass('active');
     });
+
+  function checkUpdate() {
+    $(document).on('click', 'li input:checkbox', function() {
+          var answer = $(this).closest('li').next('.answer');
+          if(this.checked){
+              $(this).parent().css({
+                'text-decoration': 'line-through',
+                'opacity': '0.6'
+              });
+          } else {
+              $(this).parent().css({
+              'text-decoration': 'none',
+              'opacity': '1'
+            });
+          }
+      });
+  }
+
 
 
   function checkCompletedLenght() {
@@ -130,8 +139,8 @@ $(document).ready(function () {
       for (var i = data.length - 1; i > -1; i--) {
         let checked = data[i].done ? 'checked' : '';
         let style = data[i].done ? 'style="display: visible"' : 'style="display: hidden"';
-        
-        $('#all-content').append('<li class="mt5 show-data"   id="li'+data[i].id +
+        let styleOpacity = data[i].done ? 'style="opacity: 0.6;text-decoration:line-through"' : 'style="opacity: 1"';
+        $('#all-content').append('<li class="mt5 show-data" id="li'+data[i].id +
           '"><input type="checkbox"  class="update checkbox" '+checked+' id="done'+data[i].id+'">'+data[i].name +
           '<i class="fa fa-times delete"  aria-hidden="true" id="done'+data[i].id+'"></i></li>');
 
@@ -158,7 +167,7 @@ $(document).ready(function () {
         '<i class="fa fa-times delete" aria-hidden="true" id="delete'+renderData.id+'"></i></li>')
       ;
       if ( action === 'create' && renderData.done === true ) {
-        $('#completed-content li:first-child').before('<li class="mt5 show-data"  style="opacity: 0.6" id="acitve'+renderData.id +
+        $('#completed-content li:first-child').before('<li class="mt5 show-data"   style="opacity: 0.6" id="acitve'+renderData.id +
           '"><input type="checkbox" checked  class="checkbox comletedUpdate " id="doneCompleted'+renderData.id+'">'+renderData.name +
           '<i class="fa fa-times delete" aria-hidden="true" id="delete'+renderData.id+'"></i></li>')
         ;
