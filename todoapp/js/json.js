@@ -130,7 +130,6 @@ $(document).ready(function () {
 
 
   function render( action, renderData ) {
-
     if ( action === 'init' ) {
       for (var i = data.length - 1; i > -1; i--) {
         let checked = data[i].done ? 'checked' : '';
