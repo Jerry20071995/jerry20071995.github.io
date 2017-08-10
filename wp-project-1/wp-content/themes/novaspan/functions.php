@@ -1,4 +1,11 @@
 <?php
+/**
+  @ Load file /core/init.php
+  @ Đây là file cấu hình ban đầu của theme mà sẽ không nên được thay đổi sau này.
+  **/
+require_once( CORE . '/init.php' );
+define( 'THEME_URL', get_stylesheet_directory() );
+define( 'CORE', THEME_URL . '/core' );
 
 function master_setup() {
 	add_theme_support( 'title-tag' );
@@ -11,6 +18,14 @@ function master_setup() {
 		'gallery',
 		'caption',
 	) );
+	add_theme_support( 'post-formats',
+    array(
+       'image',
+       'video',
+       'gallery',
+       'quote',
+       'link'
+    ) );
 }
 add_action( 'after_setup_theme', 'master_setup' );
 

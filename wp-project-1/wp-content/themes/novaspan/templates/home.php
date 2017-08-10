@@ -476,7 +476,7 @@ get_header();
       <div class="section">
         <div class="container">
           <!-- Start Big Heading -->
-          <div class="big-title text-center">    Meet Our Team
+          <div class="big-title text-center">Meet Our Team
           </div>
           <!-- End Big Heading -->
           <!-- Some Text -->

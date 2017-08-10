@@ -150,6 +150,8 @@
                   'menu_class' => 'nav navbar-nav navbar-right',
                 ) );
 
+               
+
               ?>
 
             </div>
@@ -337,7 +339,7 @@
                 </li>
                 <li><a href="blog-full-width.html">Blog - Full Width</a></li>
                 <li>
-                  <a href="single-post.html">
+                  <a href="bog-full-width.php">
                   Blog Single Post
                   </a>
                 </li>

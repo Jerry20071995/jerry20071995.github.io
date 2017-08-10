@@ -518,6 +518,19 @@ ul.social-list li a.vimeo:hover {
   visibility: visible;
   margin-top: 0;
 }
+#menu-main-menu li > a:hover {
+  background: #ee3733;
+  color: #fff;
+}
+
+.current_page_item  a:hover {
+  background: #ee3733;
+  color: #fff;
+}
+.navbar-default .navbar-nav > li:hover > a, .navbar-default .navbar-nav > li > a.active {
+  background: #ee3733;
+  color: #fff;
+}
 .search-side {
   position: relative;
   float: right;

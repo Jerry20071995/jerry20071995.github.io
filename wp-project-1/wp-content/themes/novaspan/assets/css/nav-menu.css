@@ -264,6 +264,8 @@ ul.social-list li a.vimeo:hover {
 .slicknav_menu {
   display: none;
 }
+
+
 @media screen and (max-width: 767px) {
   .js #wpb-mobile-menu {
     display: none;
