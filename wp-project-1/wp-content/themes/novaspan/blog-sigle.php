@@ -24,6 +24,15 @@
       <!-- End Page Banner -->
 
       <!-- Start Content -->
+    <?php 
+      $args_my_query = array(
+        'post_type'    =>    'post',
+        'order'     => 'ASC',
+      );
+      $my_query = new WP_Query( $args_my_query );
+     if( $my_query->have_posts() ) : while( $my_query->have_posts() ) : $my_query->the_post();
+      endwhile; endif; 
+    ?>
       <div id="content">
         <div class="container">
           <div class="row">
@@ -62,15 +71,11 @@
                 <!-- Post Content -->
                 <div class="post-content">
                   <div class="meta">
-                    <span class="meta-part"><a href="#"><i class="icon-clock"></i> Fabruary 25, 2015</a></span>
-                    <span class="meta-part"><a href="#"><i class="icon-bubbles  "></i> 124 Comments</a></span>
-                    <span class="meta-part"><a href="#"><i class="icon-like "></i> 214 Likes</a></span>
+                    <span class="meta-part"><a href="#"><i class="icon-clock"></i> <?php echo get_the_time('',$post->ID); ?></a></span>
                     <span class="meta-part"><i class="icon-folder"></i> <a href="#">Photography</a>, <a href="#">Tutorials</a></span>
-                    <span class="meta-part"><a href="#"><i class="icon-user"></i> John Doe</a></span>
-                  </div>   
-                  <h3 class="post-title"><a href="#">Gallery Post With Nice Lightbox</a></h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                  <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                  </div>
+                  <h3 class="post-title"><a href="#"><?php echo the_title(); ?></a></h3>
+                  <p><?php echo the_content(); ?></p>
                   <blockquote>
                     <i class="fa fa-quote-right"></i>
                     <span class="quote-text">
@@ -85,8 +90,7 @@
 
                 <!-- Share social -->
                 <div class="share">
-                  <div class="social-link pull-left"> 
-                    <span>Share This article</span>   
+                  <div class="social-link pull-left">  
                     <a class="twitter" target="_blank" data-original-title="twitter" href="#" data-toggle="tooltip" data-placement="top"><i class="fa fa-twitter"></i></a>
                     <a class="facebook" target="_blank" data-original-title="facebook" href="#" data-toggle="tooltip" data-placement="top"><i class="fa fa-facebook"></i></a>
                     <a class="google" target="_blank" data-original-title="google-plus" href="#" data-toggle="tooltip" data-placement="top"><i class="fa fa-google-plus"></i></a>

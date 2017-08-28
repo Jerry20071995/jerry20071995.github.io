@@ -149,9 +149,6 @@
                   'container' => false,
                   'menu_class' => 'nav navbar-nav navbar-right',
                 ) );
-
-               
-
               ?>
 
             </div>

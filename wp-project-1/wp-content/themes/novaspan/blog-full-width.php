@@ -82,7 +82,7 @@
                     <span class="meta-part"><a href="#"><i class="icon-clock"></i> Fabruary 25, 2015</a></span>
                     <span class="meta-part"><i class="icon-folder"></i> <a href="#">News</a>, <a href="#">Events</a></span>
                   </div>
-                  <h3 class="post-title"><a href="#">Amazing Standard Post</a></h3>
+                  <h3 class="post-title"><a href="blog-sigle.php">Amazing Standard Post</a></h3>
                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
                 </div>
                 <!-- Post Content -->
@@ -95,7 +95,7 @@
                     <a class="linkedin" target="_blank" data-original-title="linkedin" href="#" data-toggle="tooltip" data-placement="top"><i class="fa fa-linkedin"></i></a>
                   </div>
                   <div class="pull-right">
-                    <a class="btn btn-effect" href="#">Continue Reading <i class="fa fa-angle-right"></i></a>
+                    <a class="btn btn-effect" href="blog-sigle.php">Continue Reading <i class="fa fa-angle-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -118,7 +118,7 @@
                     <a class="linkedin" target="_blank" data-original-title="linkedin" href="#" data-toggle="tooltip" data-placement="top"><i class="fa fa-linkedin"></i></a>
                   </div>
                   <div class="pull-right">
-                    <a class="btn btn-effect" href="#">Continue Reading <i class="fa fa-angle-right"></i></a>
+                    <a class="btn btn-effect" href="blog-sigle.php">Continue Reading <i class="fa fa-angle-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -139,7 +139,7 @@
                     <span class="meta-part"><a href="#"><i class="icon-clock"></i> Fabruary 25, 2015</a></span>
                     <span class="meta-part"><i class="icon-folder"></i> <a href="#">News</a>, <a href="#">Tutorials</a></span>
                   </div>
-                  <h3 class="post-title"><a href="#">Vimeo Video Post</a></h3>
+                  <h3 class="post-title"><a href="blog-sigle.php">Vimeo Video Post</a></h3>
                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
                 </div>
                 <!-- Post Content -->
@@ -152,7 +152,7 @@
                     <a class="linkedin" target="_blank" data-original-title="linkedin" href="#" data-toggle="tooltip" data-placement="top"><i class="fa fa-linkedin"></i></a>
                   </div>
                   <div class="pull-right">
-                    <a class="btn btn-effect" href="#">Continue Reading <i class="fa fa-angle-right"></i></a>
+                    <a class="btn btn-effect" href="blog-sigle.php">Continue Reading <i class="fa fa-angle-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -173,7 +173,7 @@
                     <span class="meta-part"><a href="#"><i class="icon-clock"></i> Fabruary 25, 2015</a></span>
                     <span class="meta-part"><i class="icon-folder"></i> <a href="#">Tutorials</a>, <a href="#">Audio</a></span>
                   </div>
-                  <h3 class="post-title"><a href="#">SoundCloud Audio Post</a></h3>
+                  <h3 class="post-title"><a href="blog-sigle.php">SoundCloud Audio Post</a></h3>
                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
                 </div>
                 <!-- Post Content -->
@@ -186,7 +186,7 @@
                     <a class="linkedin" target="_blank" data-original-title="linkedin" href="#" data-toggle="tooltip" data-placement="top"><i class="fa fa-linkedin"></i></a>
                   </div>
                   <div class="pull-right">
-                    <a class="btn btn-effect" href="#">Continue Reading <i class="fa fa-angle-right"></i></a>
+                    <a class="btn btn-effect" href="blog-sigle.php">Continue Reading <i class="fa fa-angle-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -207,7 +207,7 @@
                     <span class="meta-part"><a href="#"><i class="icon-clock"></i> Fabruary 25, 2015</a></span>
                     <span class="meta-part"><i class="icon-folder"></i> <a href="#">Video</a>, <a href="#">Traning</a></span>
                   </div>
-                  <h3 class="post-title"> <a href="#">Video Post</a></h3>
+                  <h3 class="post-title"> <a href="blog-sigle.php">Video Post</a></h3>
                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
                 </div>
                 <!-- Post Content -->
@@ -220,13 +220,16 @@
                     <a class="linkedin" target="_blank" data-original-title="linkedin" href="#" data-toggle="tooltip" data-placement="top"><i class="fa fa-linkedin"></i></a>
                   </div>
                   <div class="pull-right">
-                    <a class="btn btn-effect" href="#">Continue Reading <i class="fa fa-angle-right"></i></a>
+                    <a class="btn btn-effect" href="blog-sigle.php">Continue Reading <i class="fa fa-angle-right"></i></a>
                   </div>
                 </div>
               </div>
               <!-- End Post -->  
               <!-- Start Pagination -->
               <div id="pagination">
+              <?php 
+                
+              ?>
                 <span class="all-pages">Page 1 of 3</span>
                 <span class="current page-num">1</span>
                 <a class="page-num" href="#">2</a>
